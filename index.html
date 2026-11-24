@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blemince Paris | Seamless Luxury Lingerie</title>
+  <meta
+    name="description"
+    content="Blemince Paris — premium seamless lingerie & everyday essentials. Invisible comfort, everlasting elegance. Too glam to blend in."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%85%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <!-- Skip to content -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__container">
+      <a href="#" class="header__logo" aria-label="Blemince Paris homepage">
+        <span class="logo-mark">B</span>
+        <span class="logo-word">Blemince<span class="logo-accent"> Paris</span></span>
+      </a>
+
+      <nav class="header__nav" id="headerNav">
+        <ul class="nav-list">
+          <li><a href="#shop" class="nav-link">Shop</a></li>
+          <li><a href="#new-in" class="nav-link">New In</a></li>
+          <li><a href="#best-sellers" class="nav-link">Best Sellers</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Search">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>
+        </button>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Shopping cart" aria-expanded="false" aria-controls="cartDrawer">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.2 3M17 13l2.2 3" /><path d="M9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0" /></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="mobile-menu__overlay"></div>
+    <div class="mobile-menu__panel">
+      <button class="mobile-menu__close" id="closeMenuBtn" aria-label="Close menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+      <ul class="mobile-menu__list">
+        <li><a href="#shop" class="mobile-menu__link">Shop</a></li>
+        <li><a href="#new-in" class="mobile-menu__link">New In</a></li>
+        <li><a href="#best-sellers" class="mobile-menu__link">Best Sellers</a></li>
+        <li><a href="#about" class="mobile-menu__link">About</a></li>
+        <li><a href="#contact" class="mobile-menu__link">Contact</a></li>
+      </ul>
+      <div class="mobile-menu__footer">
+        <a href="#" class="mobile-menu__instagram">@bleminceparis</a>
+        <span class="mobile-menu__divider">·</span>
+        <a href="#" class="mobile-menu__newsletter">Newsletter</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero__bg"></div>
+      <div class="hero__container">
+        <span class="hero__badge">New Collection · Invisible Comfort</span>
+        <h1 class="hero__title">
+          Too Glam to<br />
+          <span class="hero__title-accent">Blend In.</span>
+        </h1>
+        <p class="hero__subtitle">
+          Seamless luxury lingerie that feels like a second skin — invisible,
+          breathable, and made for everyday elegance.
+        </p>
+        <div class="hero__cta">
+          <a href="#shop" class="btn btn--primary">Shop the Collection</a>
+          <a href="#best-sellers" class="btn btn--outline">Best Sellers</a>
+        </div>
+        <p class="hero__social-proof">
+          4.9★ · 1,200+ happy customers · Worldwide shipping
+        </p>
+      </div>
+      <div class="hero__image">
+        <img
+          src="assets/images/hero-placeholder.jpg"
+          alt="Model wearing seamless lingerie in soft natural light"
+          class="hero__img"
+          loading="lazy"
+        />
+      </div>
+      <a href="#shop" class="hero__scroll">
+        Shop<span class="hero__scroll-arrow"> →</span>
+      </a>
+    </section>
+
+    <!-- Collections intro -->
+    <section class="collection-intro" id="shop">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">The Collections</h2>
+          <p class="section-description">
+            Everyday essentials designed to disappear under clothing — so you
+            can focus on feeling confident, not adjusting.
+          </p>
+        </div>
+        <div class="collection-grid">
+          <a href="#new-in" class="collection-card">
+            <span class="collection-card__badge">New In</span>
+            <img
+              src="assets/images/collection-newin.jpg"
+              alt="New In collection"
+              class="collection-card__img"
+              loading="lazy"
+            />
+            <span class="collection-card__overlay">Explore the latest arrivals</span>
+          </a>
+          <a href="#best-sellers" class="collection-card">
+            <span class="collection-card__badge">Best Sellers</span>
+            <img
+              src="assets/images/collection-bestsellers.jpg"
+              alt="Best Sellers collection"
+              class="collection-card__img"
+              loading="lazy"
+            />
+            <span class="collection-card__overlay">Customer favorites</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-header products__header">
+          <h2 class="section-title">Seamless Essentials</h2>
+          <p class="section-description">
+            Invisible support, unbelievable comfort. The pieces you reach for
+            every day.
+          </p>
+          <div class="products__filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="bras">Bras</button>
+            <button class="filter-btn" data-filter="underwear">Underwear</button>
+            <button class="filter-btn" data-filter="sets">Sets</button>
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits" id="about">
+      <div class="container">
+        <div class="benefits__grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">✦</div>
+            <h3 class="benefit-title">Invisible Under Clothing</h3>
+            <p class="benefit-text">Seamless construction with no visible lines — wear under anything with total confidence.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">✦</div>
+            <h3 class="benefit-title">Second Skin Feel</h3>
+            <p class="benefit-text">Ultra-soft, breathable fabric that moves with you — lightweight enough to forget you're wearing it.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">✦</div>
+            <h3 class="benefit-title">All-Day Support</h3>
+            <p class="benefit-text">Exceptional support without sacrifice. From morning coffee to evening plans, comfort that lasts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header testimonials__header">
+          <div class="testimonials__rating-badge">
+            <span class="stars">★★★★★</span>
+            <span class="rating-text">4.9 / 5 · 1,200+ reviews</span>
+          </div>
+          <h2 class="section-title">What They're Saying</h2>
+        </div>
+        <div class="testimonial-grid" id="testimonialGrid"></div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" id="newsletter">
+      <div class="newsletter__inner">
+        <div class="newsletter__content">
+          <h2 class="newsletter__title">Join the Blemince Circle</h2>
+          <p class="newsletter__subtitle">
+            Early access to new collections, restocks, and private events.
+          </p>
+        </div>
+        <form class="newsletter__form" id="newsletterForm" novalidate>
+          <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Enter your email"
+            required
+            aria-required="true"
+          />
+          <button type="submit" class="btn btn--primary">Subscribe</button>
+          <p class="newsletter__msg" id="newsletterMsg"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <span class="logo-mark">B</span>
+        <span class="logo-word">Blemince<span class="logo-accent"> Paris</span></span>
+        <p class="footer__tagline">
+          Premium seamless lingerie & everyday essentials. Invisible comfort,
+          everlasting elegance.
+        </p>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="Instagram">Instagram</a>
+          <a href="#" class="footer__social-link" aria-label="TikTok">TikTok</a>
+          <a href="#" class="footer__social-link" aria-label="Pinterest">Pinterest</a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <div class="footer__link-group">
+          <span class="footer__link-title">Shop</span>
+          <a href="#shop">New In</a>
+          <a href="#best-sellers">Best Sellers</a>
+          <a href="#products">Bras</a>
+          <a href="#products">Underwear</a>
+          <a href="#products">Sets</a>
+        </div>
+        <div class="footer__link-group">
+          <span class="footer__link-title">Support</span>
+          <a href="#">Size Guide</a>
+          <a href="#">Shipping & Returns</a>
+          <a href="#">Care Instructions</a>
+          <a href="#">FAQ</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div class="footer__link-group">
+          <span class="footer__link-title">About</span>
+          <a href="#about">Our Story</a>
+          <a href="#">Sustainability</a>
+          <a href="#">Press</a>
+          <a href="#">Wholesale</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 Blemince Paris. All rights reserved.</p>
+        <p class="footer__payment">
+          Worldwide shipping · Secure checkout · Prices in PLN
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="cart-drawer__overlay" id="cartOverlay"></div>
+    <div class="cart-drawer__panel">
+      <button class="cart-drawer__close" id="closeCartBtn" aria-label="Close cart">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+      <div class="cart-drawer__header">
+        <h2 class="cart-drawer__title">Your Bag</h2>
+        <span class="cart-drawer__empty-illustration" aria-hidden="true">🛍️</span>
+      </div>
+      <div class="cart-drawer__items" id="cartItems">
+        <!-- items injected here -->
+      </div>
+      <div class="cart-drawer__footer">
+        <div class="cart-drawer__totals">
+          <span class="totals-label">Subtotal</span>
+          <span class="totals-value" id="cartSubtotal">0.00 zł</span>
+        </div>
+        <button class="btn btn--primary cart-drawer__checkout" id="cartCheckout" disabled>
+          Checkout
+        </button>
+        <p class="cart-drawer__note">
+          Free shipping on orders over 299 zł · Worldwide
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div class="modal" id="quickViewModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal__overlay" id="qvOverlay"></div>
+    <div class="modal__panel">
+      <button class="modal__close" id="closeQvBtn" aria-label="Close details">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+      <div class="modal__content" id="qvContent">
+        <!-- injected -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
