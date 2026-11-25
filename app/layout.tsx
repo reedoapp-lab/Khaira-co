@@ -5,6 +5,7 @@ import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import SmoothScroll from "@/components/smooth-scroll";
 import ScrollProgress from "@/components/scroll-progress";
+import { CursorEffect } from "@/components/cursor-effect";
 import { site } from "@/lib/site";
 
 const inter = Inter({
@@ -142,6 +143,7 @@ export default function RootLayout({
         />
         <SmoothScroll />
         <ScrollProgress />
+        <CursorEffect />
         <a href="#main" className="skip-link">
           Skip to content
         </a>

@@ -1,4 +1,5 @@
 import { SectionLabel } from "@/components/section-label";
+import { NebulaBackdrop, OrbitHalo } from "@/components/artwork";
 import { cn } from "@/lib/utils";
 
 type PageHeroProps = {
@@ -25,15 +26,14 @@ export function PageHero({
         className,
       )}
     >
+      <NebulaBackdrop variant="light" />
+      <div aria-hidden className="grid-soft absolute inset-0 opacity-40" />
       <div
         aria-hidden
-        className="ambient-blob -left-32 top-0 h-[24rem] w-[24rem] bg-brand/15"
-      />
-      <div
-        aria-hidden
-        className="ambient-blob -right-24 top-10 h-[22rem] w-[22rem] bg-brand-soft/20"
-      />
-      <div aria-hidden className="grid-soft absolute inset-0 opacity-70" />
+        className="pointer-events-none absolute -right-44 top-1/2 hidden w-[34rem] -translate-y-1/2 opacity-90 lg:block"
+      >
+        <OrbitHalo />
+      </div>
 
       <div className="container-x relative z-10 py-16 md:py-24">
         <SectionLabel>{eyebrow}</SectionLabel>

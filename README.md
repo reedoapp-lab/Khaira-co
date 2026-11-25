@@ -49,6 +49,19 @@ Also included: `app/sitemap.ts`, `app/robots.ts`, `app/manifest.ts`, `app/icon.s
 
 ---
 
+## Artwork & motion
+
+The visual system is drawn in code rather than sourced from stock photography, so it stays on-brand and lightweight:
+
+- **`components/artwork.tsx`** — `NebulaBackdrop`, `OrbitHalo`, `OrbitDiagram`, `SignalField`, `ConstellationMap` and the framed `ArtPanel`.
+- **`public/art/*.svg`** — standalone versions of the same artwork for decks, social posts or future use.
+- **Motion** — slow orbital rotation, star twinkle, signal-line dash, node pulses and drifting aurora. All decorative animation is disabled under `prefers-reduced-motion`.
+- **Cursor** — a soft emerald glow and ring follow the pointer on fine-pointer devices only (`components/cursor-effect.tsx`, mounted once in `app/layout.tsx`).
+
+Light nebula treatments appear on every inner page hero and the homepage flagship section; the homepage hero and closing CTA use the darker, more luminous variant.
+
+---
+
 ## Contact form
 
 `components/contact-form.tsx` validates on the client and posts to `app/api/contact/route.ts`, which validates again, checks the honeypot and consent, then optionally sends an email notification.

@@ -12,7 +12,11 @@ import { CtaLink } from "@/components/cta-link";
 import { Reveal } from "@/components/reveal";
 import { LeadDemo } from "@/components/lead-demo";
 import { CtaSection } from "@/components/cta-section";
-import { CursorEffect } from "@/components/cursor-effect";
+import {
+  ArtPanel,
+  ConstellationMap,
+  NebulaBackdrop,
+} from "@/components/artwork";
 import { SolutionIcon, StageIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
@@ -49,8 +53,6 @@ export default function SolutionsPage() {
           </>
         }
       />
-
-      <CursorEffect size={40} followFactor={0.15} />
 
       <section className="section-pad bg-white">
         <div className="container-x">
@@ -183,15 +185,8 @@ export default function SolutionsPage() {
         aria-labelledby="system-title"
         className="relative overflow-hidden border-y border-line bg-mist section-pad"
       >
-        <div
-          aria-hidden
-          className="ambient-blob -right-24 top-0 h-[30rem] w-[30rem] bg-brand/15"
-        />
-        <div
-          aria-hidden
-          className="ambient-blob -left-24 bottom-0 h-[26rem] w-[26rem] bg-brand-soft/20"
-        />
-        <div aria-hidden className="grid-soft absolute inset-0 opacity-50" />
+        <NebulaBackdrop variant="light" />
+        <div aria-hidden className="grid-soft absolute inset-0 opacity-40" />
 
         <div className="container-x relative z-10">
           <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
@@ -355,6 +350,20 @@ export default function SolutionsPage() {
               <CtaLink href="/how-we-work" variant="link">
                 See how we implement it
               </CtaLink>
+            </div>
+
+            <div className="mt-8">
+              <ArtPanel
+                art={<ConstellationMap />}
+                label="Connected by design"
+                className="aspect-[4/3]"
+              >
+                <div className="flex h-full flex-col justify-end p-5">
+                  <p className="text-xs leading-relaxed text-white/70">
+                    One system. Five visible steps. No orphaned enquiries.
+                  </p>
+                </div>
+              </ArtPanel>
             </div>
           </div>
 

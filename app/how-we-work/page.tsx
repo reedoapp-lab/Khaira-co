@@ -12,6 +12,7 @@ import { CtaLink } from "@/components/cta-link";
 import { Reveal } from "@/components/reveal";
 import { Faq } from "@/components/faq";
 import { CtaSection } from "@/components/cta-section";
+import { ArtPanel, OrbitDiagram } from "@/components/artwork";
 
 export const metadata: Metadata = {
   title: "How We Work — A Clear Growth Systems Process",
@@ -61,6 +62,20 @@ export default function HowWeWorkPage() {
                 <CtaLink href="/contact" variant="link">
                   Start with a conversation
                 </CtaLink>
+              </div>
+
+              <div className="mt-8 hidden lg:block">
+                <ArtPanel
+                  art={<OrbitDiagram compact />}
+                  label="The process"
+                  className="aspect-square"
+                >
+                  <div className="flex h-full flex-col justify-end p-4">
+                    <p className="text-[11px] leading-relaxed text-white/60">
+                      Discover → strategise → build → optimise.
+                    </p>
+                  </div>
+                </ArtPanel>
               </div>
             </div>
           </div>

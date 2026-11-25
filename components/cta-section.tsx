@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { CtaLink } from "@/components/cta-link";
 import { SectionLabel } from "@/components/section-label";
+import { NebulaBackdrop } from "@/components/artwork";
 import { cn } from "@/lib/utils";
 
 type CtaSectionProps = {
@@ -29,17 +30,10 @@ export function CtaSection({
   return (
     <section className={cn("container-x pb-20 pt-4 md:pb-28", className)}>
       <div className="relative overflow-hidden rounded-[2rem] bg-dark px-6 py-16 text-white md:px-12 md:py-20 lg:px-16">
+        <NebulaBackdrop variant="dark" className="opacity-95" />
         <div
           aria-hidden
-          className="grid-dark pointer-events-none absolute inset-0 opacity-80"
-        />
-        <div
-          aria-hidden
-          className="ambient-blob -right-20 -top-24 h-[26rem] w-[26rem] bg-brand/30"
-        />
-        <div
-          aria-hidden
-          className="ambient-blob -bottom-32 left-1/4 h-[20rem] w-[20rem] bg-brand-soft/10"
+          className="grid-dark pointer-events-none absolute inset-0 opacity-50"
         />
 
         <div className="relative grid gap-10 lg:grid-cols-12 lg:items-end">

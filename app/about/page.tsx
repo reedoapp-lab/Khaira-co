@@ -6,6 +6,7 @@ import { SectionLabel } from "@/components/section-label";
 import { CtaLink } from "@/components/cta-link";
 import { Reveal } from "@/components/reveal";
 import { CtaSection } from "@/components/cta-section";
+import { ArtPanel, ConstellationMap } from "@/components/artwork";
 
 export const metadata: Metadata = {
   title: "About — A B2B Growth & Automation Agency",
@@ -60,6 +61,21 @@ export default function AboutPage() {
               Most growth problems are not marketing problems. They are{" "}
               <span className="text-brand">system problems.</span>
             </h2>
+
+            <div className="mt-8">
+              <ArtPanel
+                art={<ConstellationMap />}
+                label="Strategy × systems × execution"
+                className="aspect-[4/3]"
+              >
+                <div className="flex h-full flex-col justify-end p-5">
+                  <p className="text-xs leading-relaxed text-white/70">
+                    One commercial outcome, connected across strategy, systems
+                    and execution.
+                  </p>
+                </div>
+              </ArtPanel>
+            </div>
           </div>
           <div className="lg:col-span-7">
             <p className="max-w-2xl text-base leading-relaxed text-muted md:text-lg">

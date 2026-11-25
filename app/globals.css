@@ -182,21 +182,21 @@ html.lenis body {
 .cosmic-surface {
   background:
     radial-gradient(
-      ellipse 58% 62% at 6% 8%,
-      rgba(34, 199, 142, 0.24),
+      ellipse 62% 64% at 6% 6%,
+      rgba(34, 199, 142, 0.38),
       transparent 62%
     ),
     radial-gradient(
-      ellipse 46% 56% at 96% 2%,
-      rgba(126, 232, 192, 0.14),
+      ellipse 50% 60% at 96% 2%,
+      rgba(126, 232, 192, 0.24),
       transparent 62%
     ),
     radial-gradient(
-      ellipse 70% 54% at 54% 112%,
-      rgba(10, 122, 86, 0.3),
+      ellipse 74% 56% at 54% 112%,
+      rgba(10, 122, 86, 0.42),
       transparent 64%
     ),
-    linear-gradient(180deg, #04110b 0%, #061b12 52%, #04110b 100%);
+    linear-gradient(180deg, #06180f 0%, #08271a 52%, #05160e 100%);
 }
 
 .starfield {
@@ -541,6 +541,182 @@ textarea.field {
   animation: orbit-spin 100s linear infinite reverse;
 }
 
+/* ————— Generated artwork motion ————— */
+
+.art-drift,
+.art-drift-slow,
+.art-spin,
+.art-spin-slow,
+.art-spin-slower,
+.art-spin-reverse,
+.art-pulse-node {
+  transform-box: fill-box;
+  transform-origin: center;
+  will-change: transform;
+}
+
+@keyframes art-drift {
+  0%,
+  100% {
+    transform: translate3d(-14px, 8px, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(20px, -14px, 0) scale(1.04);
+  }
+}
+
+.art-drift {
+  animation: art-drift 22s ease-in-out infinite;
+}
+
+.art-drift-slow {
+  animation: art-drift 34s ease-in-out infinite reverse;
+}
+
+.art-spin {
+  animation: orbit-spin 110s linear infinite;
+}
+
+.art-spin-slow {
+  animation: orbit-spin 150s linear infinite;
+}
+
+.art-spin-slower {
+  animation: orbit-spin 240s linear infinite;
+}
+
+.art-spin-reverse {
+  animation: orbit-spin 190s linear infinite reverse;
+}
+
+@keyframes art-twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.art-twinkle {
+  animation: art-twinkle 6s ease-in-out infinite;
+}
+
+@keyframes art-pulse-node {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.35);
+  }
+}
+
+.art-pulse-node {
+  animation: art-pulse-node 5.5s ease-in-out infinite;
+}
+
+@keyframes art-dash {
+  to {
+    stroke-dashoffset: -260;
+  }
+}
+
+.art-dash {
+  animation: art-dash 20s linear infinite;
+}
+
+@keyframes art-beam {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.art-beam {
+  animation: art-beam 7s ease-in-out infinite;
+}
+
+/* ————— Cursor follower ————— */
+
+.cursor-layer {
+  display: none;
+}
+
+@media (pointer: fine) {
+  .cursor-layer {
+    display: block;
+  }
+}
+
+.cursor-glow {
+  position: absolute;
+  left: -190px;
+  top: -190px;
+  width: 380px;
+  height: 380px;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle,
+    rgba(34, 199, 142, 0.24) 0%,
+    rgba(34, 199, 142, 0.09) 42%,
+    transparent 70%
+  );
+  filter: blur(6px);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  will-change: transform;
+}
+
+.cursor-ring {
+  position: absolute;
+  left: -18px;
+  top: -18px;
+  width: 36px;
+  height: 36px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  will-change: transform;
+}
+
+.cursor-ring-scale {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  border: 1px solid rgba(34, 199, 142, 0.7);
+  box-shadow:
+    0 0 28px rgba(34, 199, 142, 0.55),
+    inset 0 0 12px rgba(34, 199, 142, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.cursor-ring-scale::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  margin: -2px 0 0 -2px;
+  border-radius: 9999px;
+  background: #22c78e;
+  box-shadow: 0 0 12px rgba(126, 232, 192, 0.95);
+}
+
+.cursor-ring.is-down .cursor-ring-scale {
+  transform: scale(0.7);
+}
+
+.cursor-ring.is-down {
+  box-shadow: 0 0 40px rgba(34, 199, 142, 0.5);
+}
+
 .glow-line {
   background: linear-gradient(
     90deg,
@@ -617,8 +793,23 @@ textarea.field {
   .animate-shimmer,
   .animate-orbit,
   .animate-orbit-reverse,
+  .art-drift,
+  .art-drift-slow,
+  .art-spin,
+  .art-spin-slow,
+  .art-spin-slower,
+  .art-spin-reverse,
+  .art-twinkle,
+  .art-pulse-node,
+  .art-dash,
+  .art-beam,
   .pulse-dot {
     animation: none !important;
+  }
+
+  .cursor-glow,
+  .cursor-ring {
+    transition: none !important;
   }
 
   [data-reveal] {

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SectionLabel } from "@/components/section-label";
 import { CtaLink } from "@/components/cta-link";
+import { NebulaBackdrop } from "@/components/artwork";
 
 type LegalSection = {
   id: string;
@@ -25,11 +26,8 @@ export function LegalLayout({
   return (
     <>
       <section className="relative overflow-hidden border-b border-line bg-mist">
-        <div
-          aria-hidden
-          className="ambient-blob -right-24 top-0 h-72 w-72 bg-brand/15"
-        />
-        <div aria-hidden className="grid-soft absolute inset-0 opacity-60" />
+        <NebulaBackdrop variant="light" />
+        <div aria-hidden className="grid-soft absolute inset-0 opacity-40" />
         <div className="container-x relative z-10 py-14 md:py-20">
           <SectionLabel>Legal</SectionLabel>
           <h1 className="display mt-6 max-w-3xl text-[clamp(2.4rem,5vw,4rem)]">

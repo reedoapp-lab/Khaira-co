@@ -1,72 +1,102 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
-import { useState, useEffect, useRef } from "react";
 
-type CursorEffectProps = {
-  className?: string;
-  size?: number;
-  followFactor?: number;
-  color?: string;
-  opacity?: number;
-};
-
-export function CursorEffect({
-  className,
-  size = 30,
-  followFactor = 0.15,
-  color = "var(--color-brand)",
-  opacity = 0.4,
-}: CursorEffectProps) {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const containerRef = useRef<HTMLDivElement>(null);
-  const orbRef = useRef<HTMLDivElement>(null);
+/**
+ * A soft emerald glow and ring that follow the pointer.
+ * - Only mounts on fine-pointer devices.
+ * - Uses a rAF loop with easing for the glow trail.
+ * - Motion still tracks the pointer for reduced-motion users, but without lag.
+ */
+export function CursorEffect({ className }: { className?: string }) {
+  const glowRef = useRef<HTMLDivElement>(null);
+  const ringRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      setPosition({
-        x: e.clientX - size / 2,
-        y: e.clientY - size / 2,
-      });
+    if (!window.matchMedia("(pointer: fine)").matches) return;
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let targetX = window.innerWidth / 2;
+    let targetY = window.innerHeight / 2;
+    let glowX = targetX;
+    let glowY = targetY;
+    let frame = 0;
+    let visible = false;
+
+    const show = () => {
+      if (visible) return;
+      visible = true;
+      glowX = targetX;
+      glowY = targetY;
+      if (glowRef.current) glowRef.current.style.opacity = "1";
+      if (ringRef.current) ringRef.current.style.opacity = "1";
     };
 
-    document.addEventListener("mousemove", handler);
+    const hide = () => {
+      visible = false;
+      if (glowRef.current) glowRef.current.style.opacity = "0";
+      if (ringRef.current) ringRef.current.style.opacity = "0";
+    };
 
-    // Set initial position via CSS variable
-    if (containerRef.current) {
-      containerRef.current.style.setProperty(
-        "--cursor-orb-position",
-        `${position.x}px ${position.y}px`
-      );
-    }
+    const render = () => {
+      frame = 0;
+      const ease = reduce ? 1 : 0.14;
+      glowX += (targetX - glowX) * ease;
+      glowY += (targetY - glowY) * ease;
+
+      if (glowRef.current) {
+        glowRef.current.style.transform = `translate3d(${glowX}px, ${glowY}px, 0)`;
+      }
+      if (ringRef.current) {
+        ringRef.current.style.transform = `translate3d(${targetX}px, ${targetY}px, 0)`;
+      }
+
+      if (
+        !reduce &&
+        (Math.abs(targetX - glowX) > 0.4 || Math.abs(targetY - glowY) > 0.4)
+      ) {
+        frame = requestAnimationFrame(render);
+      }
+    };
+
+    const onMove = (event: MouseEvent) => {
+      targetX = event.clientX;
+      targetY = event.clientY;
+      show();
+      if (!frame) frame = requestAnimationFrame(render);
+    };
+
+    const onDown = () => ringRef.current?.classList.add("is-down");
+    const onUp = () => ringRef.current?.classList.remove("is-down");
+    const onLeave = () => hide();
+
+    document.addEventListener("mousemove", onMove, { passive: true });
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("mouseup", onUp);
+    document.documentElement.addEventListener("mouseleave", onLeave);
 
     return () => {
-      document.removeEventListener("mousemove", handler);
+      document.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("mouseup", onUp);
+      document.documentElement.removeEventListener("mouseleave", onLeave);
+      if (frame) cancelAnimationFrame(frame);
     };
-  }, [followFactor, size]);
+  }, []);
 
   return (
     <div
-      ref={containerRef}
       aria-hidden
       className={cn(
-        "fixed pointer-events-none",
-        "transform-gpu",
-        "overflow-hidden",
-        "z-50",
+        "cursor-layer pointer-events-none fixed inset-0 z-[60] overflow-hidden",
         className,
       )}
     >
-      <div
-        ref={orbRef}
-        aria-hidden
-        className="cursor-orb absolute w-full h-full rounded-full border-2 border-brand/40 bg-brand/10 transition-all duration-500 ease-out shadow-[0_0_30px_rgba(10,122,86,0.5)]"
-        style={{
-          width: `${size}px`,
-          height: `${size}px`,
-          opacity,
-        }}
-      />
+      <div ref={glowRef} className="cursor-glow" />
+      <div ref={ringRef} className="cursor-ring">
+        <span className="cursor-ring-scale" />
+      </div>
     </div>
   );
 }

@@ -10,7 +10,7 @@ import { Reveal } from "@/components/reveal";
 import { ServiceIcon } from "@/components/icons";
 import { Faq } from "@/components/faq";
 import { CtaSection } from "@/components/cta-section";
-import { CursorEffect } from "@/components/cursor-effect";
+import { ArtPanel, SignalField } from "@/components/artwork";
 
 export const metadata: Metadata = {
   title: "Services — Lead Generation, CRM Automation & AI",
@@ -62,7 +62,45 @@ export default function ServicesPage() {
         </nav>
       </PageHero>
 
-      <CursorEffect size={35} followFactor={0.2} />
+      <section aria-labelledby="capabilities-art-title" className="bg-white">
+        <div className="container-x py-4 md:py-6">
+          <ArtPanel
+            art={<SignalField />}
+            label="Connected capabilities"
+            scrim="both"
+            className="min-h-[19rem] md:min-h-[22rem]"
+          >
+            <div className="flex h-full flex-col justify-between gap-8 p-6 pt-16 md:p-9 md:pt-9">
+              <div className="max-w-xl">
+                <h2
+                  id="capabilities-art-title"
+                  className="display text-[clamp(1.8rem,3.4vw,2.8rem)] text-white"
+                >
+                  Six capabilities.{" "}
+                  <span className="text-gradient-cosmic">
+                    One connected growth engine.
+                  </span>
+                </h2>
+                <p className="mt-3 max-w-md text-sm leading-relaxed text-white/60">
+                  Each service removes a specific bottleneck. Together they form
+                  a visible path from interest to revenue.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {services.map((service) => (
+                  <span
+                    key={service.slug}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.06] px-3 py-1.5 text-[10px] font-medium text-white/80 backdrop-blur"
+                  >
+                    <span className="h-1 w-1 rounded-full bg-brand-soft" />
+                    {service.shortTitle}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </ArtPanel>
+        </div>
+      </section>
 
       {services.map((service, index) => (
         <section

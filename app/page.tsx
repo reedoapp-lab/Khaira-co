@@ -6,7 +6,6 @@ import {
   Sparkles,
 } from "lucide-react";
 import { services } from "@/lib/services";
-import { CursorEffect } from "@/components/cursor-effect";
 import {
   differentiators,
   industries,
@@ -20,7 +19,12 @@ import { Reveal } from "@/components/reveal";
 import { HeroDashboard } from "@/components/hero-dashboard";
 import { LeadDemo } from "@/components/lead-demo";
 import { CtaSection } from "@/components/cta-section";
-import { Starfield } from "@/components/cosmic";
+import {
+  ArtPanel,
+  NebulaBackdrop,
+  OrbitDiagram,
+  SignalField,
+} from "@/components/artwork";
 import {
   DifferentiatorIcon,
   ProblemIcon,
@@ -49,47 +53,15 @@ export default function HomePage() {
         aria-labelledby="hero-title"
         className="relative overflow-hidden bg-mist pt-5 pb-14 md:pt-8 md:pb-20"
       >
-        {/* Starfield background — subtle animated dots */}
-        <Starfield tone="dark" className="cosmic-surface absolute inset-0 pointer-events-none" />
-        {/* Orbit accent */}
-        <div
-          aria-hidden
-          className="orbit-accent -inset-4 rounded-2xl border-brand/10 animate-orbit opacity-60"
-        />
-        {/* Cursor-inspired particle trail */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 overflow-hidden"
-        >
-          <div
-            aria-hidden
-            className="fixed inset-0 pointer-events-none"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 20% 30%, rgba(10, 122, 86, 0.5) 0, transparent 50%), radial-gradient(circle at 80% 70%, rgba(10, 122, 86, 0.3) 0, transparent 50%), radial-gradient(circle at 60% 20%, rgba(10, 122, 86, 0.4) 0, transparent 50%)",
-            }}
-          />
-        </div>
-
-        <div
-          aria-hidden
-          className="ambient-blob -left-32 top-0 h-[30rem] w-[30rem] bg-brand/20 animate-drift"
-        />
-        <div
-          aria-hidden
-          className="ambient-blob -right-24 top-1/4 h-[34rem] w-[34rem] bg-brand-soft/25"
-        />
-        <div
-          aria-hidden
-          className="ambient-blob bottom-0 left-1/3 h-[20rem] w-[20rem] bg-white/80"
-        />
-        <div aria-hidden className="grid-soft absolute inset-0 opacity-60" />
+        {/* Luminous emerald nebula artwork */}
+        <NebulaBackdrop variant="dark" />
+        <div aria-hidden className="grid-soft absolute inset-0 opacity-25" />
 
         <div className="container-x relative z-10">
           <div className="rounded-[2rem] border border-white/80 bg-white/75 p-2 shadow-[0_40px_120px_-50px_rgba(4,33,22,0.45)] backdrop-blur-xl md:p-3">
             <div className="rounded-[1.55rem] bg-white p-6 md:p-10 lg:p-12">
               <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
-                <div className="lg:col-span-6">
+                <div className="min-w-0 lg:col-span-6">
                   <div className="flex items-center gap-3">
                     <span aria-hidden className="h-px w-8 bg-brand/40" />
                     <p className="eyebrow">
@@ -148,7 +120,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-6">
+                <div className="min-w-0 lg:col-span-6">
                   <HeroDashboard />
                 </div>
               </div>
@@ -343,21 +315,66 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Signal artwork band */}
+      <section aria-labelledby="signal-title" className="bg-white">
+        <div className="container-x py-4 md:py-6">
+          <ArtPanel
+            art={<SignalField />}
+            label="Signal, not noise"
+            scrim="both"
+            className="min-h-[24rem] md:min-h-[27rem]"
+          >
+            <div className="flex h-full flex-col justify-between gap-10 p-6 pt-16 md:p-10 md:pt-10">
+              <div className="max-w-xl">
+                <h2
+                  id="signal-title"
+                  className="display text-[clamp(1.9rem,4vw,3.2rem)] text-white"
+                >
+                  Every enquiry leaves a trail.{" "}
+                  <span className="text-gradient-cosmic">
+                    We make it visible.
+                  </span>
+                </h2>
+                <p className="mt-4 max-w-md text-sm leading-relaxed text-white/60 md:text-base">
+                  Capture, qualification, follow-up and booking — connected in
+                  one system you can see, measure and improve.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-2">
+                {["Capture", "Qualify", "Follow up", "Book", "Report"].map(
+                  (step) => (
+                    <span
+                      key={step}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.06] px-3 py-1.5 text-[10px] font-medium text-white/80 backdrop-blur"
+                    >
+                      <span className="h-1 w-1 rounded-full bg-brand-soft" />
+                      {step}
+                    </span>
+                  ),
+                )}
+                <CtaLink
+                  href="/solutions#enquiry-to-meeting"
+                  variant="outline-inverse"
+                  size="sm"
+                  className="ml-auto"
+                >
+                  Explore the system
+                </CtaLink>
+              </div>
+            </div>
+          </ArtPanel>
+        </div>
+      </section>
+
       {/* Flagship solution */}
       <section
         id="flagship"
         aria-labelledby="flagship-title"
         className="relative overflow-hidden bg-mist section-pad"
       >
-        <div
-          aria-hidden
-          className="ambient-blob -left-24 top-10 h-[26rem] w-[26rem] bg-brand/15"
-        />
-        <div
-          aria-hidden
-          className="ambient-blob -right-24 bottom-0 h-[30rem] w-[30rem] bg-brand-soft/20"
-        />
-        <div aria-hidden className="grid-soft absolute inset-0 opacity-50" />
+        <NebulaBackdrop variant="light" />
+        <div aria-hidden className="grid-soft absolute inset-0 opacity-40" />
 
         <div className="container-x relative z-10">
           <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
@@ -385,27 +402,52 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-10 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-5">
-            {systemStages.map((stage, index) => (
-              <Reveal key={stage.id} delay={index * 0.04}>
-                <div className="relative h-full rounded-2xl border border-white/80 bg-white/80 p-4 backdrop-blur-sm">
-                  <div className="flex items-center justify-between">
-                    <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand-wash text-brand">
-                      <StageIcon icon={stage.icon} className="h-4 w-4" />
-                    </span>
-                    <span className="text-[10px] font-medium tabular-nums text-faint">
-                      {stage.index}
-                    </span>
-                  </div>
-                  <h3 className="mt-4 text-sm font-semibold text-ink">
-                    {stage.title}
-                  </h3>
-                  <p className="mt-1.5 text-xs leading-relaxed text-muted">
-                    {stage.description}
+          <div className="mt-10 grid gap-6 lg:grid-cols-12 lg:items-center">
+            <div className="lg:col-span-5">
+              <ArtPanel
+                art={<OrbitDiagram />}
+                label="The system"
+                className="aspect-square"
+              >
+                <div className="hidden h-full flex-col justify-end p-5 sm:flex md:p-6">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-brand-soft">
+                    One visible path
+                  </p>
+                  <p className="mt-2 max-w-[16rem] font-display text-lg font-medium leading-snug text-white">
+                    Capture, qualify, follow up, book, report.
                   </p>
                 </div>
-              </Reveal>
-            ))}
+              </ArtPanel>
+            </div>
+
+            <div className="grid gap-2.5 sm:grid-cols-2 lg:col-span-7">
+              {systemStages.map((stage, index) => (
+                <Reveal
+                  key={stage.id}
+                  delay={index * 0.04}
+                  className={
+                    index === systemStages.length - 1 ? "sm:col-span-2" : ""
+                  }
+                >
+                  <div className="h-full rounded-2xl border border-white/80 bg-white/80 p-4 backdrop-blur-sm">
+                    <div className="flex items-center justify-between">
+                      <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand-wash text-brand">
+                        <StageIcon icon={stage.icon} className="h-4 w-4" />
+                      </span>
+                      <span className="text-[10px] font-medium tabular-nums text-faint">
+                        {stage.index}
+                      </span>
+                    </div>
+                    <h3 className="mt-4 text-sm font-semibold text-ink">
+                      {stage.title}
+                    </h3>
+                    <p className="mt-1.5 text-xs leading-relaxed text-muted">
+                      {stage.description}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
           </div>
 
           <div className="mt-10">
@@ -607,8 +649,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <CursorEffect size={30} followFactor={0.15} />
 
       <CtaSection
         eyebrow="Next step"
