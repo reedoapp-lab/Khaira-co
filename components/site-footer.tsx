@@ -19,6 +19,15 @@ export default function SiteFooter() {
             <p className="mt-4 text-[10px] font-medium uppercase tracking-[0.16em] text-faint">
               Based in {site.location}
             </p>
+            <p className="mt-2 break-words text-[10px] leading-relaxed text-faint">
+              {site.company.legalName} · KRS {site.company.krs}
+            </p>
+            <Link
+              href="/company-details"
+              className="mt-2 inline-flex text-[11px] font-medium text-brand transition-colors hover:text-ink"
+            >
+              View company details
+            </Link>
           </div>
 
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:col-span-7">

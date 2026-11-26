@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { legalUpdated } from "@/lib/content";
+import { site } from "@/lib/site";
 import { LegalLayout } from "@/components/legal-layout";
 
 export const metadata: Metadata = {
@@ -42,10 +43,11 @@ export default function PrivacyPage() {
         <a href="https://khairaco.space">khairaco.space</a>.
       </p>
       <p>
-        Khaira.co is the trading name used on this website. Registered company
-        details and a business address will be published here once confirmed.
-        Until then, please contact us through the{" "}
-        <Link href="/contact">contact form</Link>.
+        Khaira.co is the trading name of {site.company.legalName}. Registered
+        under KRS {site.company.krs}. Full details are published on the{" "}
+        <Link href="/company-details">Company Details</Link> page. A registered
+        business address will be added once confirmed. For correspondence, use
+        the <Link href="/contact">contact form</Link>.
       </p>
       <p>
         This policy is intended to cover the personal information we handle in

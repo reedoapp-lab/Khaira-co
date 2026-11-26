@@ -44,6 +44,7 @@ npm run typecheck
 | `/contact` | Validated enquiry form, next steps, contact details and FAQ |
 | `/privacy` | Privacy policy template |
 | `/terms` | Terms & conditions template |
+| `/company-details` | Registered company name, status, KRS, NIP and REGON |
 
 Also included: `app/sitemap.ts`, `app/robots.ts`, `app/manifest.ts`, `app/favicon.ico`, `app/icon.png`, `app/apple-icon.png`, `app/opengraph-image.tsx` and a custom 404 page.
 
@@ -115,11 +116,12 @@ The endpoint is protected by:
 - **Canonical domain:** `https://khairaco.space` in `lib/site.ts`. This drives canonical URLs, the sitemap, robots and social metadata.
 - **New business email:** `grow@khairaco.space`.
 - **General email:** `info@khairaco.space`.
+- **Registered company:** `KHAIRA.CO SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ`, status `aktywna`, KRS `0001122716`, NIP `5223308677`, REGON `529443759`. Published at `/company-details` and summarised in the footer.
 - **LinkedIn:** the unconfirmed placeholder has been removed. Add a verified company page when it is available.
 
 ## Still to confirm before launch
 
-- **Registered company details and business address** - not yet published; referenced as "to be confirmed" in the legal pages.
+- **Registered business address** - not yet published.
 - **Legal pages** - privacy and terms are generic, defensible templates. They should be reviewed by a qualified adviser before launch.
 - **Resend sender verification** - the `khairaco.space` domain must be verified in Resend before live email delivery.
 
@@ -133,7 +135,7 @@ The site is ready for a standard Next.js host such as Vercel. Add the three envi
 
 Before going live:
 
-1. Add the real registered company details to the legal pages.
+1. Add the registered business address when confirmed.
 2. Have the privacy policy and terms reviewed.
 3. Configure Resend and verify the `khairaco.space` sender domain.
 4. Submit `https://khairaco.space/sitemap.xml` in Google Search Console.

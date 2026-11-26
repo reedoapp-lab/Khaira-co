@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { legalUpdated } from "@/lib/content";
+import { site } from "@/lib/site";
 import { LegalLayout } from "@/components/legal-layout";
 
 export const metadata: Metadata = {
@@ -245,10 +246,11 @@ export default function TermsPage() {
 
       <h2 id="company-details">12. Company details</h2>
       <p>
-        Khaira.co is the trading name used on this website. Registered company
-        details and a business address will be published here once confirmed.
-        Until then, please contact us through the{" "}
-        <Link href="/contact">contact form</Link>.
+        Khaira.co is the trading name of {site.company.legalName}. Registered
+        under KRS {site.company.krs}, NIP {site.company.nip} and REGON{" "}
+        {site.company.regon}. Full details are published on the{" "}
+        <Link href="/company-details">Company Details</Link> page. For
+        correspondence, use the <Link href="/contact">contact form</Link>.
       </p>
 
       <h2 id="contact">13. Contact</h2>

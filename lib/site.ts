@@ -12,6 +12,14 @@ export const site = {
     email: "grow@khairaco.space",
     infoEmail: "info@khairaco.space",
   },
+  company: {
+    legalName: "KHAIRA.CO SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
+    legalForm: "SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
+    status: "aktywna",
+    krs: "0001122716",
+    nip: "5223308677",
+    regon: "529443759",
+  },
   nav: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
@@ -29,6 +37,7 @@ export const site = {
   legalNav: [
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms & Conditions", href: "/terms" },
+    { label: "Company Details", href: "/company-details" },
   ],
 } as const;
 
