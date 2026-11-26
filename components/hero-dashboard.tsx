@@ -5,9 +5,9 @@ import {
   Check,
   Clock,
   Mail,
-  Sparkles,
   Workflow,
 } from "lucide-react";
+import { BotGlyph } from "@/components/icons";
 
 const metrics = [
   { label: "New enquiries", value: "48", change: "+12%" },
@@ -180,7 +180,7 @@ export function HeroDashboard() {
 
               <div className="mt-2 flex items-center justify-between rounded-lg border border-line bg-surface/70 px-2.5 py-1.5">
                 <span className="inline-flex items-center gap-1.5 text-[9px] text-muted">
-                  <Sparkles className="h-3 w-3 text-brand" strokeWidth={1.7} />
+                  <BotGlyph className="h-3 w-3 text-brand" strokeWidth={1.7} />
                   Follow-up automation
                 </span>
                 <span className="inline-flex items-center gap-1 text-[9px] font-medium text-success">

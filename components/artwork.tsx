@@ -597,7 +597,7 @@ export function OrbitDiagram({
         ))}
 
       <div className="pointer-events-none absolute left-1/2 top-1/2 w-32 -translate-x-1/2 -translate-y-1/2 text-center">
-        <p className="text-[8px] font-semibold uppercase tracking-[0.2em] text-brand-soft">
+        <p className="text-[8px] font-semibold uppercase tracking-[0.2em] text-eyebrow-light">
           One system
         </p>
         <p className="mt-1 font-display text-[12px] font-medium leading-tight text-white">
@@ -894,7 +894,7 @@ export function ArtPanel({
         />
       )}
       {label && (
-        <span className="absolute left-4 top-4 z-10 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.06] px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.16em] text-brand-soft backdrop-blur">
+        <span className="absolute left-4 top-4 z-10 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.06] px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.16em] text-eyebrow-light backdrop-blur">
           <span className="h-1 w-1 rounded-full bg-brand-bright" />
           {label}
         </span>

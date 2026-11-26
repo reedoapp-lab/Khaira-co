@@ -98,7 +98,7 @@ export function SystemOrbit({ className }: { className?: string }) {
       </div>
       <div className="absolute inset-[26%] rounded-full border border-line/80" />
       <div className="absolute inset-[31%] grid place-items-center rounded-full bg-dark px-3 text-center shadow-[0_18px_40px_-18px_rgba(4,17,11,0.7)]">
-        <span className="text-[7px] font-semibold uppercase tracking-[0.18em] text-brand-soft">
+        <span className="text-[7px] font-semibold uppercase tracking-[0.18em] text-eyebrow-light">
           One system
         </span>
         <span className="mt-0.5 font-display text-[11px] font-medium leading-tight text-white">

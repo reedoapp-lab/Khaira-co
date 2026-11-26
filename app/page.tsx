@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  ArrowUpRight,
-  Check,
-  Sparkles,
-} from "lucide-react";
+import { ArrowUpRight, Check } from "lucide-react";
 import { services } from "@/lib/services";
 import {
   differentiators,
@@ -19,14 +15,11 @@ import { Reveal } from "@/components/reveal";
 import { HeroDashboard } from "@/components/hero-dashboard";
 import { LeadDemo } from "@/components/lead-demo";
 import { CtaSection } from "@/components/cta-section";
-import {
-  ArtPanel,
-  NebulaBackdrop,
-  OrbitDiagram,
-  SignalField,
-} from "@/components/artwork";
+import { ArtPanel, NebulaBackdrop, SignalField } from "@/components/artwork";
+import { ScrollOrbits } from "@/components/scroll-orbits";
 import { BotSwarm } from "@/components/bot-artwork";
 import {
+  BotGlyph,
   DifferentiatorIcon,
   ProblemIcon,
   ServiceIcon,
@@ -224,11 +217,7 @@ export default function HomePage() {
             <Reveal delay={0.08}>
               <div className="mt-2.5 rounded-xl border border-brand/15 bg-brand-wash/70 p-4">
                 <p className="flex items-start gap-2.5 text-[13px] leading-relaxed text-ink">
-                  <Sparkles
-                    aria-hidden
-                    className="mt-0.5 h-4 w-4 shrink-0 text-brand"
-                    strokeWidth={1.7}
-                  />
+                  <BotGlyph className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
                   One visible system: every enquiry has an owner, a next step
                   and a measurable outcome. Website, CRM, inbox and calendar.
                 </p>
@@ -525,19 +514,10 @@ export default function HomePage() {
           <div className="mt-8 grid gap-5 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-5">
               <ArtPanel
-                art={<OrbitDiagram />}
+                art={<ScrollOrbits />}
                 label="The system"
                 className="aspect-[4/3]"
-              >
-                <div className="hidden h-full flex-col justify-end p-5 sm:flex md:p-6">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-brand-soft">
-                    One visible path
-                  </p>
-                  <p className="mt-2 max-w-[16rem] font-display text-lg font-medium leading-snug text-white">
-                    Capture, qualify, follow up, book, report.
-                  </p>
-                </div>
-              </ArtPanel>
+              />
             </div>
 
             <div className="grid gap-2 sm:grid-cols-2 lg:col-span-7">

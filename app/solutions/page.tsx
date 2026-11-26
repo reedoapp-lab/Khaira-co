@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, Check, Sparkles } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import {
   solutions,
   systemIncludes,

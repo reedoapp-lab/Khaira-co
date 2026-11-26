@@ -19,7 +19,7 @@ export function SectionLabel({
         <span
           className={cn(
             "text-[10px] font-semibold tabular-nums",
-            tone === "dark" ? "text-brand-soft" : "text-brand",
+            tone === "dark" ? "text-eyebrow-light" : "text-brand",
           )}
         >
           {index}
@@ -35,7 +35,7 @@ export function SectionLabel({
       <span
         className={cn(
           "eyebrow",
-          tone === "dark" && "text-brand-soft",
+          tone === "dark" && "eyebrow-light",
         )}
       >
         {children}

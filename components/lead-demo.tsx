@@ -19,12 +19,12 @@ import {
   Pause,
   Play,
   RotateCcw,
-  Sparkles,
   Tag,
   Users,
 } from "lucide-react";
 import { EASE } from "@/lib/motion";
 import { cn } from "@/lib/utils";
+import { BotGlyph } from "@/components/icons";
 
 const steps = [
   {
@@ -145,7 +145,7 @@ function CapturePanel() {
 
         <div className="flex flex-col rounded-xl border border-brand/15 bg-brand-wash/70 p-3.5">
           <span className="inline-flex w-fit items-center gap-1 rounded-full bg-white px-2 py-1 text-[8px] font-semibold uppercase tracking-[0.12em] text-brand">
-            <Sparkles className="h-2.5 w-2.5" strokeWidth={2} />
+            <BotGlyph className="h-2.5 w-2.5" strokeWidth={2} />
             Captured
           </span>
           <div className="mt-3 space-y-2.5 text-[10px]">
@@ -580,7 +580,7 @@ export function LeadDemo() {
       <div className="flex flex-col gap-2 border-b border-line bg-surface/60 px-3 py-2.5 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2">
           <span className="grid h-7 w-7 place-items-center rounded-full bg-brand-wash text-brand">
-            <Sparkles className="h-3.5 w-3.5" strokeWidth={1.8} />
+            <BotGlyph className="h-3.5 w-3.5" strokeWidth={1.8} />
           </span>
           <div>
             <p className="text-[11px] font-semibold text-ink">

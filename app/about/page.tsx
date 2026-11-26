@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Check, Globe2, ShieldCheck, Sparkles } from "lucide-react";
+import { Check, Globe2, ShieldCheck } from "lucide-react";
 import { industries, principles } from "@/lib/content";
 import { PageHero } from "@/components/page-hero";
 import { SectionLabel } from "@/components/section-label";
@@ -7,6 +7,7 @@ import { CtaLink } from "@/components/cta-link";
 import { Reveal } from "@/components/reveal";
 import { CtaSection } from "@/components/cta-section";
 import { ArtPanel, ConstellationMap } from "@/components/artwork";
+import { BotGlyph } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "About | The Growth Partner for Consulting Firms",
@@ -211,11 +212,7 @@ export default function AboutPage() {
 
             <div className="rounded-xl border border-brand/15 bg-brand-wash/60 p-4 md:col-span-2">
               <div className="flex items-start gap-3">
-                <Sparkles
-                  aria-hidden
-                  className="mt-0.5 h-4 w-4 shrink-0 text-brand"
-                  strokeWidth={1.7}
-                />
+                <BotGlyph className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
                 <div>
                   <h3 className="font-display text-lg font-semibold tracking-[-0.02em] text-ink">
                     How we think about AI

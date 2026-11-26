@@ -1,3 +1,4 @@
+import type { ComponentType } from "react";
 import {
   BarChart3,
   Blocks,
@@ -12,7 +13,6 @@ import {
   MousePointerClick,
   Network,
   Repeat,
-  Sparkles,
   Target,
   TrendingUp,
   Unplug,
@@ -22,20 +22,82 @@ import type { LucideIcon } from "lucide-react";
 import type { ServiceIcon } from "@/lib/services";
 import type { SolutionIcon } from "@/lib/solutions";
 
-const serviceIcons: Record<ServiceIcon, LucideIcon> = {
+type IconProps = {
+  className?: string;
+};
+
+type GlyphProps = IconProps & {
+  strokeWidth?: number;
+  "aria-hidden"?: boolean;
+};
+
+type GlyphComponent = ComponentType<GlyphProps>;
+
+export function BotGlyph({ className, strokeWidth = 1.7 }: GlyphProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden
+      className={className}
+    >
+      <path
+        d="M12 2.6v2.4"
+        stroke="currentColor"
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+      />
+      <circle cx="12" cy="2.2" r="1.35" fill="currentColor" />
+      <rect
+        x="3.25"
+        y="5.25"
+        width="17.5"
+        height="14"
+        rx="4.6"
+        stroke="currentColor"
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d="M2 10.8v3M22 10.8v3"
+        stroke="currentColor"
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+      />
+      <rect
+        x="6.75"
+        y="9"
+        width="10.5"
+        height="6"
+        rx="3"
+        fill="currentColor"
+        opacity="0.16"
+      />
+      <circle cx="9.3" cy="12" r="1.15" fill="currentColor" />
+      <circle cx="14.7" cy="12" r="1.15" fill="currentColor" />
+      <path
+        d="M10.3 16.3c1.1.8 2.3.8 3.4 0"
+        stroke="currentColor"
+        strokeWidth={Math.max(1, strokeWidth - 0.25)}
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+const serviceIcons: Record<ServiceIcon, GlyphComponent> = {
   target: Target,
   workflow: Workflow,
-  sparkles: Sparkles,
+  sparkles: BotGlyph,
   monitor: MonitorSmartphone,
   trending: TrendingUp,
   blocks: Blocks,
 };
 
-const solutionIcons: Record<SolutionIcon, LucideIcon> = {
+const solutionIcons: Record<SolutionIcon, GlyphComponent> = {
   system: Layers,
   target: Target,
   workflow: Workflow,
-  sparkles: Sparkles,
+  sparkles: BotGlyph,
   monitor: MonitorSmartphone,
 };
 
@@ -47,7 +109,7 @@ const problemIcons = {
 
 const differentiatorIcons = {
   briefcase: Briefcase,
-  sparkles: Sparkles,
+  sparkles: BotGlyph,
   network: Network,
   gauge: Gauge,
 } as const;
@@ -59,10 +121,6 @@ const stageIcons = {
   convert: CalendarCheck,
   measure: BarChart3,
 } as const;
-
-type IconProps = {
-  className?: string;
-};
 
 export function ServiceIcon({
   icon,
