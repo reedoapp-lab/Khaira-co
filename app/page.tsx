@@ -353,7 +353,7 @@ export default function HomePage() {
             scrim="both"
             className="min-h-[18rem] md:min-h-[20rem]"
           >
-            <div className="flex h-full flex-col justify-between gap-6 p-5 pt-11 md:p-7 md:pt-7">
+            <div className="flex h-full flex-col justify-between gap-6 p-5 pt-12 md:p-7 md:pt-12">
               <div className="max-w-xl">
                 <h2
                   id="signal-title"
