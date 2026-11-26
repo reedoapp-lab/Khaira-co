@@ -9,22 +9,22 @@ export default function SiteFooter() {
 
   return (
     <footer className="relative overflow-hidden border-t border-line bg-surface">
-      <div className="container-x relative z-10 pt-16 md:pt-20">
-        <div className="grid gap-12 lg:grid-cols-12">
+      <div className="container-x relative z-10 pt-12 md:pt-14">
+        <div className="grid gap-8 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <Logo size="footer" />
-            <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted">
+            <p className="mt-4 max-w-xs text-[13px] leading-relaxed text-muted">
               {site.description}
             </p>
-            <p className="mt-6 text-[11px] font-medium uppercase tracking-[0.16em] text-faint">
+            <p className="mt-4 text-[10px] font-medium uppercase tracking-[0.16em] text-faint">
               Based in {site.location}
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-7">
+          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:col-span-7">
             <div>
               <p className="eyebrow text-[10px] text-muted">Company</p>
-              <ul className="mt-4 space-y-2.5 text-sm text-muted">
+              <ul className="mt-3 space-y-2 text-[13px] text-muted">
                 <li>
                   <Link
                     href="/"
@@ -48,7 +48,7 @@ export default function SiteFooter() {
 
             <div>
               <p className="eyebrow text-[10px] text-muted">Services</p>
-              <ul className="mt-4 space-y-2.5 text-sm text-muted">
+              <ul className="mt-3 space-y-2 text-[13px] text-muted">
                 {services.map((service) => (
                   <li key={service.slug}>
                     <Link
@@ -64,7 +64,7 @@ export default function SiteFooter() {
 
             <div>
               <p className="eyebrow text-[10px] text-muted">Contact</p>
-              <div className="mt-4 space-y-4 text-sm">
+              <div className="mt-3 space-y-3 text-[13px]">
                 <div>
                   <p className="text-[11px] text-faint">New business</p>
                   <a
@@ -97,7 +97,7 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-line py-6 text-xs text-faint md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-line py-5 text-[11px] text-faint md:flex-row md:items-center md:justify-between">
           <p>© {year} Khaira.co. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
             {site.legalNav.map((link) => (
@@ -126,7 +126,7 @@ export default function SiteFooter() {
         aria-hidden
         className="pointer-events-none relative -mb-[2vw] select-none overflow-hidden"
       >
-        <p className="whitespace-nowrap text-center font-display text-[21vw] font-semibold leading-[0.72] tracking-[-0.07em] text-ink/[0.035]">
+        <p className="whitespace-nowrap text-center font-display text-[17vw] font-semibold leading-[0.72] tracking-[-0.07em] text-ink/[0.035]">
           KHAIRA
         </p>
       </div>

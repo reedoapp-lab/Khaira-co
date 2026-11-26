@@ -35,13 +35,13 @@ export function PageHero({
         <OrbitHalo />
       </div>
 
-      <div className="container-x relative z-10 py-16 md:py-24">
+      <div className="container-x relative z-10 py-12 md:py-16">
         <SectionLabel>{eyebrow}</SectionLabel>
-        <h1 className="display mt-6 max-w-4xl text-[clamp(2.7rem,6vw,5rem)]">
+        <h1 className="display mt-5 max-w-3xl text-[clamp(2.1rem,4.6vw,3.6rem)]">
           {title}
         </h1>
-        <div className="mt-7 grid gap-8 md:grid-cols-12 md:items-end">
-          <p className="max-w-2xl text-base leading-relaxed text-muted md:col-span-7 md:text-lg">
+        <div className="mt-5 grid gap-6 md:grid-cols-12 md:items-end">
+          <p className="max-w-xl text-sm leading-relaxed text-muted md:col-span-7 md:text-base">
             {description}
           </p>
           {actions && (

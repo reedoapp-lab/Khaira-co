@@ -184,7 +184,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
         initial={reduceMotion ? false : { opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: EASE }}
-        className="flex min-h-[28rem] flex-col justify-center"
+        className="flex min-h-[22rem] flex-col justify-center"
       >
         <span className="grid h-14 w-14 place-items-center rounded-full bg-emerald-50 text-emerald-700">
           <Check className="h-6 w-6" strokeWidth={2} />
@@ -192,7 +192,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
         <h2
           ref={successHeadingRef}
           tabIndex={-1}
-          className="display mt-6 text-3xl text-ink focus:outline-none md:text-4xl"
+          className="display mt-4 text-2xl text-ink focus:outline-none md:text-3xl"
         >
           Thank you, {firstName}.
         </h2>
@@ -225,12 +225,12 @@ export function ContactForm({ defaultService }: ContactFormProps) {
   }
 
   return (
-    <form onSubmit={onSubmit} noValidate className="space-y-5">
-      <div className="grid gap-5 sm:grid-cols-2">
+    <form onSubmit={onSubmit} noValidate className="space-y-4">
+      <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label
             htmlFor="contact-name"
-            className="mb-1.5 flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-muted"
+            className="mb-1 flex items-center gap-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-muted"
           >
             Full name <span className="text-brand">*</span>
           </label>
@@ -250,7 +250,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
           {errors.name && (
             <p
               id="contact-name-error"
-              className="mt-1.5 text-xs text-red-600"
+              className="mt-1 text-[11px] text-red-600"
             >
               {errors.name}
             </p>
@@ -260,7 +260,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
         <div>
           <label
             htmlFor="contact-email"
-            className="mb-1.5 flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-muted"
+            className="mb-1 flex items-center gap-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-muted"
           >
             Business email <span className="text-brand">*</span>
           </label>
@@ -282,7 +282,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
           {errors.email && (
             <p
               id="contact-email-error"
-              className="mt-1.5 text-xs text-red-600"
+              className="mt-1 text-[11px] text-red-600"
             >
               {errors.email}
             </p>
@@ -292,7 +292,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
         <div>
           <label
             htmlFor="contact-company"
-            className="mb-1.5 flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-muted"
+            className="mb-1 flex items-center gap-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-muted"
           >
             Company <span className="text-brand">*</span>
           </label>
@@ -314,7 +314,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
           {errors.company && (
             <p
               id="contact-company-error"
-              className="mt-1.5 text-xs text-red-600"
+              className="mt-1 text-[11px] text-red-600"
             >
               {errors.company}
             </p>
@@ -324,7 +324,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
         <div>
           <label
             htmlFor="contact-website"
-            className="mb-1.5 block text-[10px] font-semibold uppercase tracking-[0.14em] text-muted"
+            className="mb-1 block text-[9px] font-semibold uppercase tracking-[0.14em] text-muted"
           >
             Website{" "}
             <span className="font-normal normal-case tracking-normal text-faint">
@@ -350,7 +350,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
           {errors.website && (
             <p
               id="contact-website-error"
-              className="mt-1.5 text-xs text-red-600"
+              className="mt-1 text-[11px] text-red-600"
             >
               {errors.website}
             </p>
@@ -361,7 +361,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
       <div>
         <label
           htmlFor="contact-service"
-          className="mb-1.5 flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-muted"
+          className="mb-1 flex items-center gap-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-muted"
         >
           Service of interest <span className="text-brand">*</span>
         </label>
@@ -397,7 +397,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
         {errors.service && (
           <p
             id="contact-service-error"
-            className="mt-1.5 text-xs text-red-600"
+            className="mt-1 text-[11px] text-red-600"
           >
             {errors.service}
           </p>
@@ -407,7 +407,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
       <div>
         <label
           htmlFor="contact-challenge"
-          className="mb-1.5 flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-muted"
+          className="mb-1 flex items-center gap-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-muted"
         >
           Describe the business challenge{" "}
           <span className="text-brand">*</span>
@@ -415,7 +415,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
         <textarea
           id="contact-challenge"
           name="challenge"
-          rows={5}
+          rows={4}
           maxLength={5000}
           value={form.challenge}
           onChange={(event) => update("challenge", event.target.value)}
@@ -432,7 +432,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
         {errors.challenge && (
           <p
             id="contact-challenge-error"
-            className="mt-1.5 text-xs text-red-600"
+            className="mt-1 text-[11px] text-red-600"
           >
             {errors.challenge}
           </p>
@@ -442,7 +442,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
       <div>
         <div
           className={cn(
-            "flex items-start gap-3 rounded-xl border bg-surface/60 p-3.5",
+            "flex items-start gap-2.5 rounded-lg border bg-surface/60 p-3",
             errors.consent ? "border-red-500" : "border-line",
           )}
         >
@@ -460,7 +460,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
           />
           <label
             htmlFor="contact-consent"
-            className="text-xs leading-relaxed text-muted"
+            className="text-[11px] leading-relaxed text-muted"
           >
             I agree to Khaira.co contacting me about this enquiry and have read
             the{" "}
@@ -478,7 +478,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
         {errors.consent && (
           <p
             id="contact-consent-error"
-            className="mt-1.5 text-xs text-red-600"
+            className="mt-1 text-[11px] text-red-600"
           >
             {errors.consent}
           </p>
@@ -499,18 +499,18 @@ export function ContactForm({ defaultService }: ContactFormProps) {
       {status === "error" && (
         <div
           role="alert"
-          className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
+          className="rounded-lg border border-red-200 bg-red-50 px-3 py-2.5 text-[13px] text-red-700"
         >
           We couldn&apos;t send your enquiry. Please try again in a moment. If
           it keeps happening, use the email address listed on this page.
         </div>
       )}
 
-      <div className="flex flex-col gap-4 pt-1 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center sm:justify-between">
         <button
           type="submit"
           disabled={status === "sending"}
-          className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-medium text-white shadow-[0_14px_34px_-16px_rgba(10,122,86,0.8)] transition-all duration-300 hover:bg-[#065c40] disabled:cursor-wait disabled:opacity-70 sm:w-auto"
+          className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-5 py-2.5 text-[13px] font-medium text-white shadow-[0_14px_34px_-16px_rgba(10,122,86,0.8)] transition-all duration-300 hover:bg-[#065c40] disabled:cursor-wait disabled:opacity-70 sm:w-auto"
         >
           {status === "sending" ? (
             <>

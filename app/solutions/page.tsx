@@ -46,7 +46,7 @@ export default function SolutionsPage() {
             <span className="text-brand">missed opportunities.</span>
           </>
         }
-        description="We design the flow between your website, CRM, inbox and calendar, so every enquiry has a clear owner and a clear next step. No black boxes. No manual handoffs."
+        description="Website, CRM, inbox and calendar in one flow. Every enquiry gets an owner and a next step. No black boxes, no handoffs."
         actions={
           <>
             <CtaLink href="/contact" size="lg">
@@ -68,18 +68,17 @@ export default function SolutionsPage() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
               <SectionLabel index="01">Solution areas</SectionLabel>
-              <h2 className="display mt-6 max-w-2xl text-[clamp(2.2rem,4.4vw,3.7rem)]">
+              <h2 className="display mt-5 max-w-xl text-[clamp(1.9rem,3.6vw,3rem)]">
                 Start with the constraint. Build the system around it.
               </h2>
             </div>
-            <p className="max-w-sm text-sm leading-relaxed text-muted">
-              Each solution can stand alone, but they are designed to connect.
-              The goal is one visible journey from first enquiry to booked
-              conversation, built on the tools your team already uses.
+            <p className="max-w-xs text-[13px] leading-relaxed text-muted">
+              Each solution stands alone, but connects to the others. One
+              visible journey, built on your existing tools.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-3 lg:grid-cols-12">
+          <div className="mt-7 grid gap-2.5 lg:grid-cols-12">
             {solutions.map((solution, index) => (
               <Reveal
                 key={solution.slug}
@@ -95,16 +94,16 @@ export default function SolutionsPage() {
                 <article
                   className={
                     solution.flagship
-                      ? "flex h-full flex-col rounded-2xl border border-brand/20 bg-brand-wash/50 p-5 md:p-7"
-                      : "flex h-full flex-col rounded-2xl border border-line bg-white p-5 md:p-6"
+                      ? "flex h-full flex-col rounded-xl border border-brand/20 bg-brand-wash/50 p-4 md:p-5"
+                      : "flex h-full flex-col rounded-xl border border-line bg-white p-4"
                   }
                 >
                   <div className="flex items-start justify-between gap-4">
                     <span
                       className={
                         solution.flagship
-                          ? "grid h-11 w-11 place-items-center rounded-xl bg-brand text-white"
-                          : "grid h-11 w-11 place-items-center rounded-xl bg-brand-wash text-brand"
+                          ? "grid h-9 w-9 place-items-center rounded-lg bg-brand text-white"
+                          : "grid h-9 w-9 place-items-center rounded-lg bg-brand-wash text-brand"
                       }
                     >
                       <SolutionIcon
@@ -119,13 +118,13 @@ export default function SolutionsPage() {
                     )}
                   </div>
 
-                  <h3 className="mt-5 font-display text-2xl font-semibold tracking-[-0.035em] text-ink md:text-[1.7rem]">
+                  <h3 className="mt-4 font-display text-xl font-semibold tracking-[-0.035em] text-ink">
                     {solution.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">
+                  <p className="mt-1.5 text-[13px] leading-relaxed text-muted">
                     {solution.short}
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-muted">
+                  <p className="mt-2 text-[13px] leading-relaxed text-muted">
                     {solution.description}
                   </p>
 
@@ -151,11 +150,11 @@ export default function SolutionsPage() {
                     </div>
                   )}
 
-                  <ul className="mt-5 space-y-2 border-t border-line/80 pt-4">
+                  <ul className="mt-4 space-y-1.5 border-t border-line/80 pt-3">
                     {solution.includes.slice(0, 4).map((item) => (
                       <li
                         key={item}
-                        className="flex items-start gap-2 text-xs leading-relaxed text-muted"
+                        className="flex items-start gap-2 text-[11px] leading-relaxed text-muted"
                       >
                         <Check
                           aria-hidden
@@ -167,7 +166,7 @@ export default function SolutionsPage() {
                     ))}
                   </ul>
 
-                  <div className="mt-auto pt-5">
+                  <div className="mt-auto pt-4">
                     <CtaLink
                       href={
                         solution.flagship
@@ -203,17 +202,16 @@ export default function SolutionsPage() {
               <SectionLabel index="02">The flagship system</SectionLabel>
               <h2
                 id="system-title"
-                className="display mt-6 max-w-3xl text-[clamp(2.2rem,4.6vw,3.9rem)]"
+                className="display mt-5 max-w-2xl text-[clamp(1.9rem,3.8vw,3.1rem)]"
               >
                 From first enquiry to booked meeting.{" "}
                 <span className="text-brand">Automatically.</span>
               </h2>
             </div>
             <div className="lg:col-span-5">
-              <p className="text-sm leading-relaxed text-muted md:text-base">
-                A connected workflow that captures, organises and follows up
-                with every lead, then shows you what happened. Built on HubSpot
-                or Pipedrive, n8n or Make, Gmail or Outlook, Calendly and Slack.
+              <p className="text-[13px] leading-relaxed text-muted">
+                One workflow that captures, organises and follows up with every
+                lead. HubSpot or Pipedrive, n8n or Make, Calendly and Slack.
               </p>
               <div className="mt-5 flex flex-wrap gap-3">
                 <CtaLink
@@ -229,20 +227,20 @@ export default function SolutionsPage() {
             </div>
           </div>
 
-          <div id="system-demo" className="mt-10">
+          <div id="system-demo" className="mt-8">
             <LeadDemo />
           </div>
 
-          <div className="mt-12 grid gap-3 lg:grid-cols-12">
+          <div className="mt-9 grid gap-2.5 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <div className="rounded-2xl border border-white/80 bg-white/80 p-5 backdrop-blur-sm md:p-6">
+              <div className="rounded-xl border border-white/80 bg-white/80 p-4 backdrop-blur-sm">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-brand">
                   The workflow
                 </p>
                 <div className="mt-4 space-y-2.5">
                   {systemStages.map((stage, index) => (
                     <Reveal key={stage.id} delay={index * 0.03}>
-                      <div className="grid gap-3 rounded-xl border border-line bg-white p-3.5 sm:grid-cols-[auto_1fr] sm:items-start">
+                      <div className="grid gap-2.5 rounded-lg border border-line bg-white p-3 sm:grid-cols-[auto_1fr] sm:items-start">
                         <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand-wash text-brand">
                           <StageIcon icon={stage.icon} className="h-4 w-4" />
                         </span>
@@ -251,14 +249,14 @@ export default function SolutionsPage() {
                             <span className="text-[9px] font-medium tabular-nums text-faint">
                               {stage.index}
                             </span>
-                            <h3 className="text-sm font-semibold text-ink">
+                            <h3 className="text-[13px] font-semibold text-ink">
                               {stage.title}
                             </h3>
                           </div>
-                          <p className="mt-1 text-xs leading-relaxed text-muted">
+                          <p className="mt-0.5 text-[11px] leading-relaxed text-muted">
                             {stage.description}
                           </p>
-                          <p className="mt-1 text-xs leading-relaxed text-muted">
+                          <p className="mt-0.5 text-[11px] leading-relaxed text-muted">
                             {stage.detail}
                           </p>
                         </div>
@@ -270,7 +268,7 @@ export default function SolutionsPage() {
             </div>
 
             <div className="space-y-3 lg:col-span-5">
-              <div className="rounded-2xl border border-white/80 bg-white/80 p-5 backdrop-blur-sm md:p-6">
+              <div className="rounded-xl border border-white/80 bg-white/80 p-4 backdrop-blur-sm">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-brand">
                   What&apos;s included
                 </p>
@@ -291,32 +289,31 @@ export default function SolutionsPage() {
                 </ul>
               </div>
 
-              <div className="rounded-2xl border border-brand/15 bg-brand-wash/80 p-5 md:p-6">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-brand">
+              <div className="rounded-xl border border-brand/15 bg-brand-wash/80 p-4">
+                <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-brand">
                   Who it&apos;s for
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-ink">
-                  Consulting and professional service firms with inbound demand
-                  and a follow-up process that depends on memory or individual
-                  heroics.
+                <p className="mt-1.5 text-[13px] leading-relaxed text-ink">
+                  Firms with inbound demand and follow-up that depends on
+                  memory or heroics.
                 </p>
-                <p className="mt-3 text-xs leading-relaxed text-muted">
-                  Best fit: 2 to 50 people, an established offer, and a desire to
-                  improve conversion before increasing acquisition spend.
+                <p className="mt-2 text-[11px] leading-relaxed text-muted">
+                  Best fit: 2 to 50 people, an established offer, and a desire
+                  to improve conversion before increasing spend.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mt-3 rounded-2xl border border-white/80 bg-white/80 p-5 backdrop-blur-sm md:p-6">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-brand">
+          <div className="mt-3 rounded-xl border border-white/80 bg-white/80 p-4 backdrop-blur-sm">
+            <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-brand">
               What changes
             </p>
-            <div className="mt-4 grid gap-2.5 sm:grid-cols-2">
+            <div className="mt-3 grid gap-2 sm:grid-cols-2">
               {systemOutcomes.map((outcome) => (
                 <p
                   key={outcome}
-                  className="flex items-start gap-2.5 text-sm leading-relaxed text-muted"
+                  className="flex items-start gap-2 text-[13px] leading-relaxed text-muted"
                 >
                   <Check
                     aria-hidden
@@ -329,31 +326,30 @@ export default function SolutionsPage() {
             </div>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className="mt-7 flex flex-wrap items-center gap-2.5">
             <CtaLink
               href="/contact?service=Enquiry-to-Meeting%20System"
               size="lg"
             >
               Discuss the Enquiry-to-Meeting System
             </CtaLink>
-            <p className="text-xs text-faint">
-              No obligation. A 30-minute working conversation.
+            <p className="text-[11px] text-faint">
+              No obligation. 30 minutes, working conversation.
             </p>
           </div>
         </div>
       </section>
 
       <section className="section-pad bg-white">
-        <div className="container-x grid gap-12 lg:grid-cols-12">
+        <div className="container-x grid gap-8 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <SectionLabel index="03">How it fits together</SectionLabel>
-            <h2 className="display mt-6 text-[clamp(2.2rem,4.2vw,3.4rem)]">
+            <h2 className="display mt-5 text-[clamp(1.9rem,3.4vw,2.8rem)]">
               One journey. Five visible steps.
             </h2>
-            <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted">
-              The system is designed around the way a real opportunity moves
-              through your business, not around a software vendor&apos;s
-              template.
+            <p className="mt-4 max-w-xs text-[13px] leading-relaxed text-muted">
+              Built around how a real opportunity moves through your business,
+              not a software template.
             </p>
             <div className="mt-6">
               <CtaLink href="/how-we-work" variant="link">
@@ -361,7 +357,7 @@ export default function SolutionsPage() {
               </CtaLink>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-6">
               <ArtPanel
                 art={<ConstellationMap />}
                 label="Connected by design"
@@ -380,7 +376,7 @@ export default function SolutionsPage() {
             <div className="relative border-l border-line pl-6 md:pl-8">
               {systemStages.map((stage, index) => (
                 <Reveal key={stage.id} delay={index * 0.04}>
-                  <div className="relative pb-8 last:pb-0">
+                  <div className="relative pb-6 last:pb-0">
                     <span
                       aria-hidden
                       className="absolute -left-[1.9rem] top-1 grid h-3 w-3 place-items-center rounded-full border-2 border-white bg-brand md:-left-[2.4rem]"
@@ -388,13 +384,13 @@ export default function SolutionsPage() {
                     <p className="text-[10px] font-medium tabular-nums text-faint">
                       {stage.index}
                     </p>
-                    <h3 className="mt-1 font-display text-xl font-semibold tracking-[-0.03em] text-ink">
+                    <h3 className="mt-1 font-display text-lg font-semibold tracking-[-0.03em] text-ink">
                       {stage.title}
                     </h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                    <p className="mt-1 text-[13px] leading-relaxed text-muted">
                       {stage.description}
                     </p>
-                    <p className="mt-2 text-sm leading-relaxed text-muted">
+                    <p className="mt-1 text-[11px] leading-relaxed text-muted">
                       {stage.detail}
                     </p>
                   </div>
@@ -408,7 +404,7 @@ export default function SolutionsPage() {
       <CtaSection
         eyebrow="Next step"
         title="See where your enquiry journey breaks."
-        description="Book a free consultation and we will map the current flow from first enquiry to booked meeting, then identify the most useful place to start."
+        description="Book a free consultation. We map your flow from first enquiry to booked meeting and identify where to start."
         primaryLabel="Book Your Free Consultation"
         primaryHref="/contact"
         secondaryLabel="Explore our services"

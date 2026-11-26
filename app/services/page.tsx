@@ -40,7 +40,7 @@ export default function ServicesPage() {
             <span className="text-brand">actually wins work.</span>
           </>
         }
-        description="Six connected capabilities. Each one removes a specific bottleneck between interest and revenue. Each one is built on tools your team can actually use."
+        description="Six connected capabilities. Each removes a bottleneck between interest and revenue, built on tools your team can use."
         actions={
           <>
             <CtaLink href="/contact" size="lg">
@@ -58,13 +58,13 @@ export default function ServicesPage() {
       >
         <nav
           aria-label="Services on this page"
-          className="mt-10 flex flex-wrap gap-2"
+          className="mt-7 flex flex-wrap gap-1.5"
         >
           {services.map((service) => (
             <a
               key={service.slug}
               href={`#${service.slug}`}
-              className="rounded-full border border-line bg-white/70 px-3.5 py-2 text-[11px] font-medium text-muted transition-colors hover:border-brand/30 hover:text-ink group"
+              className="rounded-full border border-line bg-white/70 px-3 py-1.5 text-[11px] font-medium text-muted transition-colors hover:border-brand/30 hover:text-ink"
             >
               {service.shortTitle}
             </a>
@@ -73,25 +73,25 @@ export default function ServicesPage() {
       </PageHero>
 
       <section aria-labelledby="capabilities-art-title" className="bg-white">
-        <div className="container-x py-4 md:py-6">
+        <div className="container-x py-3 md:py-4">
           <ArtPanel
             art={<SignalField />}
             label="Connected capabilities"
             scrim="both"
-            className="min-h-[19rem] md:min-h-[22rem]"
+            className="min-h-[15rem] md:min-h-[17rem]"
           >
-            <div className="flex h-full flex-col justify-between gap-8 p-6 pt-16 md:p-9 md:pt-9">
+            <div className="flex h-full flex-col justify-between gap-5 p-5 pt-11 md:p-7 md:pt-7">
               <div className="max-w-xl">
                 <h2
                   id="capabilities-art-title"
-                  className="display text-[clamp(1.8rem,3.4vw,2.8rem)] text-white"
+                  className="display text-[clamp(1.6rem,2.9vw,2.3rem)] text-white"
                 >
                   Six capabilities.{" "}
                   <span className="text-gradient-cosmic">
                     One connected growth engine.
                   </span>
                 </h2>
-                <p className="mt-3 max-w-md text-sm leading-relaxed text-white/60">
+                <p className="mt-2 max-w-sm text-[13px] leading-relaxed text-white/60">
                   Start with the bottleneck that is costing you the most.
                   Connect the rest when you are ready.
                 </p>
@@ -109,7 +109,7 @@ export default function ServicesPage() {
               </div>
             </div>
           </ArtPanel>
-          <p className="mt-3 text-center text-[10px] leading-relaxed text-faint">
+          <p className="mt-2.5 text-center text-[9px] leading-relaxed text-faint">
             Tool stacks shown are typical examples. We recommend the smallest
             stack that solves the problem.
           </p>
@@ -124,35 +124,35 @@ export default function ServicesPage() {
             index % 2 === 0 ? "bg-white" : "bg-surface"
           }`}
         >
-          <div className="container-x py-16 md:py-24">
-            <div className="grid gap-12 lg:grid-cols-12">
+          <div className="container-x py-10 md:py-14">
+            <div className="grid gap-8 lg:grid-cols-12">
               <div className="lg:col-span-4">
                 <div className="lg:sticky lg:top-28">
                   <SectionLabel index={service.index}>
                     {service.kicker}
                   </SectionLabel>
-                  <div className="mt-6 flex items-start gap-4">
-                    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-brand-wash text-brand">
+                  <div className="mt-4 flex items-start gap-3">
+                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-brand-wash text-brand">
                       <ServiceIcon
                         icon={service.icon}
                         className="h-5 w-5"
                       />
                     </span>
-                    <h2 className="font-display text-3xl font-semibold leading-[1.08] tracking-[-0.04em] text-ink md:text-4xl">
+                    <h2 className="font-display text-2xl font-semibold leading-[1.08] tracking-[-0.04em] text-ink md:text-3xl">
                       {service.title}
                     </h2>
                   </div>
 
-                  <div className="mt-7 rounded-2xl border border-line bg-white p-4">
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-faint">
+                  <div className="mt-5 rounded-xl border border-line bg-white p-3.5">
+                    <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-faint">
                       Best for
                     </p>
-                    <p className="mt-2 text-sm leading-relaxed text-muted">
+                    <p className="mt-1.5 text-[13px] leading-relaxed text-muted">
                       {service.bestFor}
                     </p>
                   </div>
 
-                  <div className="mt-5">
+                  <div className="mt-4">
                     <CtaLink
                       href={`/contact?service=${encodeURIComponent(service.title)}`}
                       size="sm"
@@ -166,16 +166,16 @@ export default function ServicesPage() {
 
               <div className="lg:col-span-8">
                 <Reveal>
-                  <p className="max-w-2xl text-xl leading-snug tracking-[-0.015em] text-ink md:text-2xl">
+                  <p className="max-w-xl text-lg leading-snug tracking-[-0.015em] text-ink">
                     {service.lead}
                   </p>
                 </Reveal>
-                <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted md:text-base">
+                <p className="mt-3.5 max-w-xl text-[13px] leading-relaxed text-muted">
                   {service.description}
                 </p>
 
                 <div className="mt-5">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-faint">
+                  <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-faint">
                     Typical stack
                   </p>
                   <div className="mt-2 flex flex-wrap gap-1.5">
@@ -190,20 +190,20 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                <div className="mt-9">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-faint">
+                <div className="mt-7">
+                  <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-faint">
                     What&apos;s included
                   </p>
-                  <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                  <div className="mt-2.5 grid gap-2 sm:grid-cols-2">
                     {service.deliverables.map((deliverable, deliverableIndex) => (
                       <div
                         key={deliverable}
-                        className="flex items-start gap-3 rounded-xl border border-line bg-white p-3.5"
+                        className="flex items-start gap-2.5 rounded-lg border border-line bg-white p-3"
                       >
-                        <span className="text-[10px] font-medium tabular-nums text-brand">
+                        <span className="text-[9px] font-medium tabular-nums text-brand">
                           {String(deliverableIndex + 1).padStart(2, "0")}
                         </span>
-                        <span className="text-sm leading-relaxed text-muted">
+                        <span className="text-[13px] leading-relaxed text-muted">
                           {deliverable}
                         </span>
                       </div>
@@ -211,15 +211,15 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                <div className="mt-6 rounded-2xl border border-brand/15 bg-brand-wash/60 p-5 md:p-6">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-brand">
+                <div className="mt-5 rounded-xl border border-brand/15 bg-brand-wash/60 p-4">
+                  <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-brand">
                     What this changes
                   </p>
                   <ul className="mt-3 space-y-2.5">
                     {service.outcomes.map((outcome) => (
                       <li
                         key={outcome}
-                        className="flex items-start gap-2.5 text-sm leading-relaxed text-muted"
+                        className="flex items-start gap-2 text-[13px] leading-relaxed text-muted"
                       >
                         <Check
                           aria-hidden
@@ -234,16 +234,15 @@ export default function ServicesPage() {
 
                 {service.slug === "ai-integration" && (
                   <Reveal delay={0.06}>
-                    <div className="mt-6">
+                    <div className="mt-5">
                       <ArtPanel
                         art={<BotCore />}
                         label="Agent core"
-                        className="aspect-[16/10]"
+                        className="aspect-[16/9]"
                       />
-                      <p className="mt-3 text-xs leading-relaxed text-faint">
-                        A governed agent layer over your CRM, inbox, calendar
-                        and knowledge base. Your team approves the moments that
-                        matter.
+                      <p className="mt-2.5 text-[11px] leading-relaxed text-faint">
+                        Governed agents over your CRM, inbox, calendar and
+                        knowledge base. Your team approves what matters.
                       </p>
                     </div>
                   </Reveal>
@@ -259,43 +258,42 @@ export default function ServicesPage() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
               <SectionLabel index="07">Engagements</SectionLabel>
-              <h2 className="display mt-6 text-[clamp(2.2rem,4.4vw,3.6rem)]">
+              <h2 className="display mt-5 text-[clamp(1.9rem,3.6vw,3rem)]">
                 Ways to work together.
               </h2>
             </div>
-            <p className="max-w-sm text-sm leading-relaxed text-muted">
-              Start with a focused audit, a defined build, or an ongoing
-              partnership. We will recommend the smallest useful engagement for
-              the problem.
+            <p className="max-w-xs text-[13px] leading-relaxed text-muted">
+              An audit, a defined build or an ongoing partnership. We recommend
+              the smallest useful engagement.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-3 lg:grid-cols-3">
+          <div className="mt-7 grid gap-2.5 lg:grid-cols-3">
             {engagementModels.map((model, index) => (
               <Reveal
                 key={model.name}
                 className="h-full"
                 delay={index * 0.05}
               >
-                <div className="flex h-full flex-col rounded-2xl border border-line bg-white p-5 md:p-6">
-                  <span className="text-[10px] font-medium tabular-nums text-faint">
+                <div className="flex h-full flex-col rounded-xl border border-line bg-white p-4">
+                  <span className="text-[9px] font-medium tabular-nums text-faint">
                     0{index + 1}
                   </span>
-                  <h3 className="mt-3 font-display text-2xl font-semibold tracking-[-0.03em] text-ink">
+                  <h3 className="mt-2.5 font-display text-xl font-semibold tracking-[-0.03em] text-ink">
                     {model.name}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted">
+                  <p className="mt-2 text-[13px] leading-relaxed text-muted">
                     {model.description}
                   </p>
-                  <p className="mt-4 text-xs leading-relaxed text-muted">
+                  <p className="mt-3 text-[11px] leading-relaxed text-muted">
                     <span className="font-medium text-ink">Best for: </span>
                     {model.bestFor}
                   </p>
-                  <ul className="mt-5 space-y-2 border-t border-line pt-4">
+                  <ul className="mt-4 space-y-1.5 border-t border-line pt-3">
                     {model.includes.map((item) => (
                       <li
                         key={item}
-                        className="flex items-start gap-2 text-xs leading-relaxed text-muted"
+                        className="flex items-start gap-2 text-[11px] leading-relaxed text-muted"
                       >
                         <Check
                           aria-hidden
@@ -306,7 +304,7 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-auto pt-6">
+                  <div className="mt-auto pt-5">
                     <CtaLink
                       href="/contact"
                       variant="link"
@@ -323,13 +321,13 @@ export default function ServicesPage() {
       </section>
 
       <section className="section-pad border-t border-line bg-surface">
-        <div className="container-x grid gap-12 lg:grid-cols-12">
+        <div className="container-x grid gap-8 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <SectionLabel index="08">FAQ</SectionLabel>
-            <h2 className="display mt-6 text-[clamp(2.2rem,4.2vw,3.4rem)]">
+            <h2 className="display mt-5 text-[clamp(1.9rem,3.4vw,2.8rem)]">
               Questions, answered.
             </h2>
-            <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted">
+            <p className="mt-4 max-w-xs text-[13px] leading-relaxed text-muted">
               Still unsure which service fits? A short conversation usually
               settles it.
             </p>
@@ -348,15 +346,15 @@ export default function ServicesPage() {
       <CtaSection
         eyebrow="Not sure where to start?"
         title="Start with a conversation."
-        description="Tell us where the business is today and where you want it to be. We will map the shortest honest route between the two."
+        description="Tell us where you are and where you want to be. We will map the shortest honest route."
         primaryLabel="Book a Free Consultation"
         primaryHref="/contact"
         secondaryLabel="See our solutions"
         secondaryHref="/solutions"
       />
 
-      <div className="container-x pb-16">
-        <div className="flex flex-wrap items-center gap-3 border-t border-line pt-6 text-xs text-faint">
+      <div className="container-x pb-12">
+        <div className="flex flex-wrap items-center gap-3 border-t border-line pt-5 text-[11px] text-faint">
           <span>Related reading</span>
           <Link
             href="/solutions#enquiry-to-meeting"

@@ -71,8 +71,8 @@ const steps = [
 
 function PanelFrame({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex min-h-[24rem] flex-col overflow-hidden rounded-xl border border-line bg-white">
-      <div className="flex items-center justify-between border-b border-line bg-surface/70 px-3.5 py-2.5">
+    <div className="flex min-h-[20rem] flex-col overflow-hidden rounded-lg border border-line bg-white">
+      <div className="flex items-center justify-between border-b border-line bg-surface/70 px-3 py-2">
         <div className="flex items-center gap-2">
           <span className="flex gap-1">
             <span className="h-1.5 w-1.5 rounded-full bg-line" />
@@ -87,7 +87,7 @@ function PanelFrame({ children }: { children: React.ReactNode }) {
           Demo
         </span>
       </div>
-      <div className="flex flex-1 flex-col p-3.5 sm:p-5">{children}</div>
+      <div className="flex flex-1 flex-col p-3 sm:p-4">{children}</div>
     </div>
   );
 }
@@ -573,11 +573,11 @@ export function LeadDemo() {
 
   return (
     <div
-      className="overflow-hidden rounded-[1.5rem] border border-line bg-white shadow-[0_30px_90px_-40px_rgba(4,33,22,0.3)]"
+      className="overflow-hidden rounded-[1.25rem] border border-line bg-white shadow-[0_30px_90px_-40px_rgba(4,33,22,0.3)]"
       role="region"
       aria-label="Interactive demonstration of the Khaira Enquiry-to-Meeting System"
     >
-      <div className="flex flex-col gap-3 border-b border-line bg-surface/60 px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-2 border-b border-line bg-surface/60 px-3 py-2.5 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2">
           <span className="grid h-7 w-7 place-items-center rounded-full bg-brand-wash text-brand">
             <Sparkles className="h-3.5 w-3.5" strokeWidth={1.8} />
@@ -624,8 +624,8 @@ export function LeadDemo() {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-[17rem_1fr]">
-        <div className="border-b border-line p-3.5 lg:border-b-0 lg:border-r lg:p-4">
+      <div className="grid lg:grid-cols-[14rem_1fr]">
+        <div className="border-b border-line p-3 lg:border-b-0 lg:border-r">
           <div className="flex items-center justify-between">
             <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-faint">
               Workflow

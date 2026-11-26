@@ -42,9 +42,9 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
             <span className="text-brand">leaking.</span>
           </>
         }
-        description="Tell us a little about your business and the challenge you are trying to solve. We will reply within one business day with a clear next step and a few specific questions."
+        description="Tell us about your business and the challenge. We reply within one business day with a clear next step."
       >
-        <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-muted">
+        <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[11px] text-muted">
           <span className="inline-flex items-center gap-2">
             <Clock className="h-3.5 w-3.5 text-brand" strokeWidth={1.7} />
             30-minute working conversation
@@ -67,40 +67,40 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
         id="enquiry-form"
         className="border-b border-line bg-surface section-pad"
       >
-        <div className="container-x grid gap-10 lg:grid-cols-12">
+        <div className="container-x grid gap-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <div className="rounded-[1.5rem] border border-line bg-white p-5 shadow-[0_24px_70px_-40px_rgba(4,33,22,0.25)] md:p-8">
+            <div className="rounded-[1.25rem] border border-line bg-white p-4 shadow-[0_24px_70px_-40px_rgba(4,33,22,0.25)] md:p-6">
               <SectionLabel index="01">Enquiry form</SectionLabel>
-              <h2 className="display mt-5 text-[clamp(1.8rem,3.4vw,2.6rem)]">
+              <h2 className="display mt-4 text-[clamp(1.6rem,2.9vw,2.2rem)]">
                 Tell us about the business.
               </h2>
-              <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
-                The more context you can share, the more useful the first
-                conversation will be. We read every enquiry ourselves.
+              <p className="mt-2 max-w-md text-[13px] leading-relaxed text-muted">
+                Share the context and the first conversation is more useful.
+                We read every enquiry ourselves.
               </p>
-              <div className="mt-7">
+              <div className="mt-5">
                 <ContactForm defaultService={requestedService} />
               </div>
             </div>
           </div>
 
           <div className="lg:col-span-5">
-            <div className="space-y-3 lg:sticky lg:top-28">
-              <div className="rounded-2xl border border-line bg-white p-5 md:p-6">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-brand">
+            <div className="space-y-2.5 lg:sticky lg:top-24">
+              <div className="rounded-xl border border-line bg-white p-4">
+                <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-brand">
                   What happens next
                 </p>
-                <ol className="mt-4 space-y-4">
+                <ol className="mt-3 space-y-3">
                   {contactSteps.map((step) => (
                     <li key={step.index} className="flex gap-3">
                       <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-brand-wash text-[10px] font-semibold text-brand">
                         {step.index}
                       </span>
                       <div>
-                        <p className="text-sm font-medium text-ink">
+                        <p className="text-[13px] font-medium text-ink">
                           {step.title}
                         </p>
-                        <p className="mt-1 text-xs leading-relaxed text-muted">
+                        <p className="mt-0.5 text-[11px] leading-relaxed text-muted">
                           {step.body}
                         </p>
                       </div>
@@ -109,11 +109,11 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                 </ol>
               </div>
 
-              <div className="rounded-2xl border border-line bg-white p-5 md:p-6">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-brand">
+              <div className="rounded-xl border border-line bg-white p-4">
+                <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-brand">
                   Contact details
                 </p>
-                <div className="mt-4 space-y-4 text-sm">
+                <div className="mt-3 space-y-3 text-[13px]">
                   <div>
                     <p className="flex items-center gap-1.5 text-[11px] text-faint">
                       <Mail className="h-3 w-3" strokeWidth={1.7} />
@@ -147,13 +147,12 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-brand/15 bg-brand-wash/70 p-5">
-                <p className="text-sm font-medium text-ink">
+              <div className="rounded-xl border border-brand/15 bg-brand-wash/70 p-4">
+                <p className="text-[13px] font-medium text-ink">
                   Prefer to explore first?
                 </p>
-                <p className="mt-2 text-xs leading-relaxed text-muted">
-                  Read how the Enquiry-to-Meeting System works before you get in
-                  touch.
+                <p className="mt-1.5 text-[11px] leading-relaxed text-muted">
+                  Read how the Enquiry-to-Meeting System works first.
                 </p>
                 <div className="mt-3">
                   <CtaLink
@@ -171,15 +170,14 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
       </section>
 
       <section className="section-pad bg-white">
-        <div className="container-x grid gap-12 lg:grid-cols-12">
+        <div className="container-x grid gap-8 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <SectionLabel index="02">Before you write</SectionLabel>
-            <h2 className="display mt-6 text-[clamp(2.2rem,4.2vw,3.4rem)]">
+            <h2 className="display mt-5 text-[clamp(1.9rem,3.4vw,2.8rem)]">
               Good to know.
             </h2>
-            <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted">
-              A few answers that may save you a question, or make the first
-              conversation more useful.
+            <p className="mt-4 max-w-xs text-[13px] leading-relaxed text-muted">
+              A few answers before the first conversation.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <CtaLink href="/services" variant="link" size="sm">

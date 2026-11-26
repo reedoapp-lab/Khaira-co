@@ -37,15 +37,15 @@ export function Faq({
               onClick={() => setOpen(isOpen ? null : index)}
               aria-expanded={isOpen}
               aria-controls={panelId}
-              className="group flex w-full items-center justify-between gap-6 py-5 text-left md:py-6"
+              className="group flex w-full items-center justify-between gap-4 py-4 text-left"
             >
               <span className="flex items-baseline gap-4">
-                <span className="text-[11px] font-medium tabular-nums text-faint">
+                <span className="text-[10px] font-medium tabular-nums text-faint">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span
                   className={cn(
-                    "text-[15px] font-medium tracking-[-0.01em] transition-colors duration-300 md:text-base",
+                    "text-[13px] font-medium tracking-[-0.01em] transition-colors duration-300 md:text-sm",
                     isOpen ? "text-brand" : "text-ink group-hover:text-brand",
                   )}
                 >
@@ -54,7 +54,7 @@ export function Faq({
               </span>
               <span
                 className={cn(
-                  "grid h-8 w-8 shrink-0 place-items-center rounded-full border transition-all duration-300",
+                  "grid h-7 w-7 shrink-0 place-items-center rounded-full border transition-all duration-300",
                   isOpen
                     ? "rotate-45 border-brand/30 bg-brand-wash text-brand"
                     : "border-line text-muted group-hover:border-brand/30 group-hover:text-brand",
@@ -76,7 +76,7 @@ export function Faq({
                   transition={{ duration: 0.38, ease: EASE }}
                   className="overflow-hidden"
                 >
-                  <p className="max-w-2xl pb-6 pl-8 pr-4 text-sm leading-relaxed text-muted">
+                  <p className="max-w-2xl pb-4 pl-7 pr-4 text-[13px] leading-relaxed text-muted">
                     {item.answer}
                   </p>
                 </motion.div>

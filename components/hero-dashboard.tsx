@@ -63,10 +63,10 @@ export function HeroDashboard() {
 
         <div
           aria-hidden
-          className="relative rounded-[1.5rem] border border-white/90 bg-white/80 p-2 shadow-[0_36px_100px_-38px_rgba(4,33,22,0.4)] backdrop-blur-xl"
+          className="relative rounded-[1.25rem] border border-white/90 bg-white/80 p-1.5 shadow-[0_36px_100px_-38px_rgba(4,33,22,0.4)] backdrop-blur-xl"
         >
-          <div className="overflow-hidden rounded-[1.15rem] border border-line bg-white">
-            <div className="flex items-center justify-between border-b border-line px-4 py-3">
+          <div className="overflow-hidden rounded-[1rem] border border-line bg-white">
+            <div className="flex items-center justify-between border-b border-line px-3.5 py-2.5">
               <div className="flex items-center gap-2.5">
                 <span className="flex gap-1">
                   <span className="h-1.5 w-1.5 rounded-full bg-line" />
@@ -82,8 +82,8 @@ export function HeroDashboard() {
               </span>
             </div>
 
-            <div className="p-3.5 sm:p-4">
-              <div className="flex items-end justify-between gap-4">
+            <div className="p-3 sm:p-3.5">
+              <div className="flex items-end justify-between gap-3">
                 <div>
                   <p className="text-[10px] font-medium uppercase tracking-[0.14em] text-faint">
                     Enquiry-to-meeting
@@ -98,17 +98,17 @@ export function HeroDashboard() {
                 </span>
               </div>
 
-              <div className="mt-3.5 grid grid-cols-2 gap-2 sm:grid-cols-4">
+              <div className="mt-3 grid grid-cols-2 gap-1.5 sm:grid-cols-4">
                 {metrics.map((metric) => (
                   <div
                     key={metric.label}
-                    className="rounded-xl border border-line bg-surface/70 p-2.5"
+                    className="rounded-lg border border-line bg-surface/70 p-2"
                   >
                     <p className="text-[9px] leading-tight text-faint">
                       {metric.label}
                     </p>
                     <div className="mt-1.5 flex items-end justify-between gap-1">
-                      <p className="font-display text-xl font-semibold leading-none tracking-[-0.04em] text-ink">
+                      <p className="font-display text-lg font-semibold leading-none tracking-[-0.04em] text-ink">
                         {metric.value}
                       </p>
                       <span className="text-[8px] font-medium text-success">
@@ -119,7 +119,7 @@ export function HeroDashboard() {
                 ))}
               </div>
 
-              <div className="mt-2.5 rounded-xl border border-line bg-white p-3">
+              <div className="mt-2 rounded-lg border border-line bg-white p-2.5">
                 <div className="flex items-center justify-between">
                   <p className="text-[9px] font-medium uppercase tracking-[0.13em] text-faint">
                     Enquiry volume
@@ -129,7 +129,7 @@ export function HeroDashboard() {
                     Demo
                   </span>
                 </div>
-                <div className="mt-3 flex h-16 items-end gap-1 sm:h-20">
+                <div className="mt-2.5 flex h-12 items-end gap-1 sm:h-16">
                   {bars.map((height, index) => (
                     <span
                       key={index}
@@ -152,7 +152,7 @@ export function HeroDashboard() {
                 </div>
               </div>
 
-              <div className="mt-2.5 space-y-1.5">
+              <div className="mt-2 space-y-1">
                 {leads.map((lead) => (
                   <div
                     key={lead.company}
@@ -178,7 +178,7 @@ export function HeroDashboard() {
                 ))}
               </div>
 
-              <div className="mt-2.5 flex items-center justify-between rounded-xl border border-line bg-surface/70 px-3 py-2">
+              <div className="mt-2 flex items-center justify-between rounded-lg border border-line bg-surface/70 px-2.5 py-1.5">
                 <span className="inline-flex items-center gap-1.5 text-[9px] text-muted">
                   <Sparkles className="h-3 w-3 text-brand" strokeWidth={1.7} />
                   Follow-up automation
@@ -194,7 +194,7 @@ export function HeroDashboard() {
 
         <div
           aria-hidden
-          className="animate-float absolute -right-3 top-16 hidden w-[13rem] rounded-2xl border border-white/90 bg-white/95 p-3 shadow-[0_24px_60px_-24px_rgba(4,33,22,0.35)] backdrop-blur-md sm:block"
+          className="animate-float absolute -right-2 top-12 hidden w-[11rem] rounded-xl border border-white/90 bg-white/95 p-2.5 shadow-[0_24px_60px_-24px_rgba(4,33,22,0.35)] backdrop-blur-md sm:block"
         >
           <div className="flex items-center justify-between">
             <span className="inline-flex items-center gap-1.5 text-[9px] font-semibold uppercase tracking-[0.12em] text-brand">
@@ -224,7 +224,7 @@ export function HeroDashboard() {
 
         <div
           aria-hidden
-          className="animate-float-slow absolute -left-5 bottom-20 hidden w-[12.5rem] rounded-2xl border border-white/90 bg-white/95 p-3 shadow-[0_24px_60px_-24px_rgba(4,33,22,0.35)] backdrop-blur-md md:block"
+          className="animate-float-slow absolute -left-3 bottom-16 hidden w-[11rem] rounded-xl border border-white/90 bg-white/95 p-2.5 shadow-[0_24px_60px_-24px_rgba(4,33,22,0.35)] backdrop-blur-md md:block"
         >
           <div className="flex items-center gap-2">
             <span className="grid h-7 w-7 place-items-center rounded-full bg-emerald-50 text-emerald-600">
@@ -251,7 +251,7 @@ export function HeroDashboard() {
 
         <div
           aria-hidden
-          className="animate-float absolute -right-4 bottom-4 hidden w-[13rem] rounded-2xl border border-white/90 bg-white/95 p-3 shadow-[0_24px_60px_-24px_rgba(4,33,22,0.35)] backdrop-blur-md xl:block"
+          className="animate-float absolute -right-3 bottom-2 hidden w-[11rem] rounded-xl border border-white/90 bg-white/95 p-2.5 shadow-[0_24px_60px_-24px_rgba(4,33,22,0.35)] backdrop-blur-md xl:block"
           style={{ animationDelay: "1.2s" }}
         >
           <div className="flex items-center gap-2">
@@ -276,7 +276,7 @@ export function HeroDashboard() {
         </div>
       </div>
 
-      <div className="mt-3 grid grid-cols-2 gap-2 sm:hidden">
+      <div className="mt-2 grid grid-cols-2 gap-1.5 sm:hidden">
         <div className="rounded-xl border border-line bg-white p-2.5">
           <p className="inline-flex items-center gap-1 text-[8px] font-semibold uppercase tracking-[0.1em] text-brand">
             <Bell className="h-2.5 w-2.5" strokeWidth={2} />

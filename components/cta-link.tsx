@@ -24,9 +24,9 @@ type CtaLinkProps = {
 };
 
 const sizes: Record<Size, string> = {
-  sm: "gap-1.5 px-4 py-2 text-[12px]",
-  md: "gap-2 px-5 py-2.5 text-[13px]",
-  lg: "gap-2.5 px-6 py-3.5 text-sm",
+  sm: "gap-1.5 px-3 py-1.5 text-[11px]",
+  md: "gap-1.5 px-4 py-2 text-[12px]",
+  lg: "gap-2 px-5 py-2.5 text-[13px]",
 };
 
 const variants: Record<Variant, string> = {
@@ -57,7 +57,7 @@ export function CtaLink({
 
   const classes = cn(
     "group inline-flex items-center justify-center font-medium transition-all duration-300",
-    isLink ? "gap-1.5 p-0 text-[13px]" : "rounded-full",
+    isLink ? "gap-1 p-0 text-xs" : "rounded-full",
     !isLink && sizes[size],
     variants[variant],
     className,

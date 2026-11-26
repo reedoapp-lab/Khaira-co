@@ -14,11 +14,11 @@ export function SectionLabel({
   tone = "light",
 }: SectionLabelProps) {
   return (
-    <div className={cn("flex items-center gap-3", className)}>
+    <div className={cn("flex items-center gap-2.5", className)}>
       {index && (
         <span
           className={cn(
-            "text-[11px] font-semibold tabular-nums",
+            "text-[10px] font-semibold tabular-nums",
             tone === "dark" ? "text-brand-soft" : "text-brand",
           )}
         >
@@ -28,7 +28,7 @@ export function SectionLabel({
       <span
         aria-hidden
         className={cn(
-          "h-px w-7",
+          "h-px w-6",
           tone === "dark" ? "bg-white/25" : "bg-brand/30",
         )}
       />

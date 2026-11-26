@@ -93,7 +93,7 @@ export default function SiteHeader() {
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-line/80 bg-white/85 backdrop-blur-xl">
-        <div className="container-x grid h-[72px] grid-cols-[1fr_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
+        <div className="container-x grid h-[64px] grid-cols-[1fr_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
           <Logo priority />
 
           <nav
@@ -108,7 +108,7 @@ export default function SiteHeader() {
                   href={link.href}
                   aria-current={active ? "page" : undefined}
                   className={cn(
-                    "relative rounded-full px-3.5 py-2 text-[13px] font-medium transition-colors duration-200",
+                    "relative rounded-full px-3 py-1.5 text-xs font-medium transition-colors duration-200",
                     active ? "text-ink" : "text-muted hover:text-ink",
                   )}
                 >
@@ -139,7 +139,7 @@ export default function SiteHeader() {
               aria-expanded={open}
               aria-controls="mobile-menu"
               aria-haspopup="dialog"
-              className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-3.5 py-2.5 text-muted transition-colors hover:border-brand/30 hover:text-ink lg:hidden"
+              className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-3 py-2 text-muted transition-colors hover:border-brand/30 hover:text-ink lg:hidden"
             >
               <Menu className="h-4 w-4" strokeWidth={1.6} />
               <span className="text-[12px] font-medium">Menu</span>
@@ -171,7 +171,7 @@ export default function SiteHeader() {
               className="ambient-blob -right-20 top-10 h-64 w-64 bg-brand/15"
             />
 
-            <div className="container-x relative flex h-[72px] shrink-0 items-center justify-between border-b border-line">
+            <div className="container-x relative flex h-[64px] shrink-0 items-center justify-between border-b border-line">
               <Logo onClick={() => setOpen(false)} />
               <button
                 ref={closeButtonRef}
@@ -189,7 +189,7 @@ export default function SiteHeader() {
 
             <div
               data-lenis-prevent
-              className="container-x relative flex-1 overflow-y-auto py-8"
+              className="container-x relative flex-1 overflow-y-auto py-6"
             >
               <nav aria-label="Mobile">
                 <ul className="space-y-1">
@@ -212,7 +212,7 @@ export default function SiteHeader() {
                           href={link.href}
                           onClick={() => setOpen(false)}
                           className={cn(
-                            "group flex items-baseline justify-between gap-4 border-b border-line/80 py-3.5",
+                            "group flex items-baseline justify-between gap-3 border-b border-line/80 py-3",
                             active ? "text-brand" : "text-ink",
                           )}
                         >
@@ -220,7 +220,7 @@ export default function SiteHeader() {
                             <span className="text-[10px] font-medium tabular-nums text-faint">
                               0{index + 1}
                             </span>
-                            <span className="font-display text-[clamp(1.9rem,8vw,2.6rem)] font-medium tracking-[-0.04em]">
+                            <span className="font-display text-[clamp(1.6rem,6.4vw,2.2rem)] font-medium tracking-[-0.04em]">
                               {link.label}
                             </span>
                           </span>
@@ -236,15 +236,15 @@ export default function SiteHeader() {
                 </ul>
               </nav>
 
-              <div className="mt-10">
+              <div className="mt-7">
                 <p className="eyebrow">Popular services</p>
-                <ul className="mt-4 space-y-3">
+                <ul className="mt-3 space-y-2">
                   {featuredServices.map((service) => (
                     <li key={service.slug}>
                       <Link
                         href={`/services#${service.slug}`}
                         onClick={() => setOpen(false)}
-                        className="link-underline text-sm text-muted hover:text-ink"
+                        className="link-underline text-[13px] text-muted hover:text-ink"
                       >
                         {service.title}
                       </Link>
@@ -253,10 +253,10 @@ export default function SiteHeader() {
                 </ul>
               </div>
 
-              <div className="mt-10">
+              <div className="mt-7">
                 <CtaLink
                   href="/contact"
-                  size="lg"
+                  size="md"
                   className="w-full"
                   withArrow
                 >
@@ -264,20 +264,20 @@ export default function SiteHeader() {
                 </CtaLink>
               </div>
 
-              <div className="mt-10 border-t border-line pt-6 pb-4">
+              <div className="mt-7 border-t border-line pt-5 pb-3">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-faint">
                   Contact
                 </p>
                 <div className="mt-3 flex flex-col gap-2">
                   <a
                     href={`mailto:${site.contact.email}`}
-                    className="text-sm text-muted transition-colors hover:text-ink"
+                    className="text-[13px] text-muted transition-colors hover:text-ink"
                   >
                     {site.contact.email}
                   </a>
                   <a
                     href={`mailto:${site.contact.infoEmail}`}
-                    className="text-sm text-muted transition-colors hover:text-ink"
+                    className="text-[13px] text-muted transition-colors hover:text-ink"
                   >
                     {site.contact.infoEmail}
                   </a>
