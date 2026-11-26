@@ -28,7 +28,7 @@ export function Logo({
     <Link
       href="/"
       onClick={onClick}
-      aria-label="Khaira.co — home"
+      aria-label="Khaira.co home"
       className={cn(
         "group inline-flex shrink-0 items-center rounded-lg",
         className,
@@ -36,7 +36,7 @@ export function Logo({
     >
       <Image
         src="/brand/khaira-logo.png"
-        alt="Khaira.co — growth and automation"
+        alt="Khaira.co growth and automation"
         width={1000}
         height={265}
         priority={priority}

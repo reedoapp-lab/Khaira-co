@@ -1,8 +1,8 @@
-# Khaira.co — B2B Growth & Automation
+# Khaira.co | The Growth System for Consulting Firms
 
-A premium, conversion-focused website for **Khaira.co**, a B2B growth and automation agency serving consulting firms and professional service businesses.
+A premium, conversion-focused website for **Khaira.co**, the growth and automation partner for consulting, advisory, IT and professional service firms.
 
-The site is built around one clear idea: **turn more opportunities into revenue**. Its flagship demonstration is the **Enquiry-to-Meeting System**, an interactive five-step walkthrough from first enquiry to booked meeting.
+The site is built around one clear idea: **turn interest into booked meetings**. Its flagship demonstration is the **Enquiry-to-Meeting System**, an interactive five-step walkthrough from first enquiry to booked meeting.
 
 Built with **Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · Motion · Lenis**.
 
@@ -36,8 +36,8 @@ npm run typecheck
 
 | Route | Description |
 | --- | --- |
-| `/` | Home: hero with dashboard visual, problem statement, six services, flagship system demo, process, why Khaira, industries, final CTA |
-| `/services` | Six detailed services with anchors, engagement models and FAQ |
+| `/` | Home: bold growth-system hero, problem statement, six services, signal artwork, AI agent section, flagship system demo, process, why Khaira, industries, final CTA |
+| `/services` | Six detailed services with anchors, typical tool stacks, engagement models and FAQ |
 | `/solutions` | Solution areas, flagship Enquiry-to-Meeting deep dive and interactive demo |
 | `/how-we-work` | Four-stage process, expectations, engagement models and FAQ |
 | `/about` | Positioning, principles, ideal fit, AI stance and sectors |
@@ -45,7 +45,7 @@ npm run typecheck
 | `/privacy` | Privacy policy template |
 | `/terms` | Terms & conditions template |
 
-Also included: `app/sitemap.ts`, `app/robots.ts`, `app/manifest.ts`, `app/icon.svg`, `app/opengraph-image.tsx` and a custom 404 page.
+Also included: `app/sitemap.ts`, `app/robots.ts`, `app/manifest.ts`, `app/favicon.ico`, `app/icon.png`, `app/apple-icon.png`, `app/opengraph-image.tsx` and a custom 404 page.
 
 ---
 
@@ -53,10 +53,11 @@ Also included: `app/sitemap.ts`, `app/robots.ts`, `app/manifest.ts`, `app/icon.s
 
 The visual system is drawn in code rather than sourced from stock photography, so it stays on-brand and lightweight:
 
-- **`components/artwork.tsx`** — `NebulaBackdrop`, `OrbitHalo`, `OrbitDiagram`, `SignalField`, `ConstellationMap` and the framed `ArtPanel`.
-- **`public/art/*.svg`** — standalone versions of the same artwork for decks, social posts or future use.
-- **Motion** — slow orbital rotation, star twinkle, signal-line dash, node pulses and drifting aurora. All decorative animation is disabled under `prefers-reduced-motion`.
-- **Cursor** — a soft emerald glow and ring follow the pointer on fine-pointer devices only (`components/cursor-effect.tsx`, mounted once in `app/layout.tsx`).
+- **`components/artwork.tsx`** - `NebulaBackdrop`, `OrbitHalo`, `OrbitDiagram`, `SignalField`, `ConstellationMap` and the framed `ArtPanel`.
+- **`components/bot-artwork.tsx`** - `BotSwarm`, a connected mesh of working AI agents, and `BotCore`, a single governed agent with HUD panels and human-in-the-loop controls.
+- **`public/art/*.svg`** - standalone versions of the artwork for decks, social posts or future use.
+- **Motion** - slow orbital rotation, star twinkle, signal-line dash, bot float, eye blink, scanlines, data packets and node pulses. All decorative animation is disabled under `prefers-reduced-motion`.
+- **Cursor** - a soft emerald glow and ring follow the pointer on fine-pointer devices only (`components/cursor-effect.tsx`, mounted once in `app/layout.tsx`).
 
 Light nebula treatments appear on every inner page hero and the homepage flagship section; the homepage hero and closing CTA use the darker, more luminous variant.
 
@@ -72,11 +73,11 @@ Copy `.env.example` to `.env.local` and add:
 
 ```bash
 RESEND_API_KEY=re_...
-CONTACT_TO_EMAIL=hello@khaira-co.eu
-CONTACT_FROM_EMAIL=Khaira.co <enquiries@khaira-co.eu>
+CONTACT_TO_EMAIL=grow@khairaco.space
+CONTACT_FROM_EMAIL=Khaira.co <grow@khairaco.space>
 ```
 
-Email uses the [Resend](https://resend.com) API directly — no SDK is required. The `CONTACT_FROM_EMAIL` domain must be verified in Resend.
+Email uses the [Resend](https://resend.com) API directly, so no SDK is required. The `CONTACT_FROM_EMAIL` domain must be verified in Resend.
 
 Without these variables, the form still works and returns a success response; the enquiry is logged to the server console instead of being emailed. This keeps local development and previews functional.
 
@@ -90,8 +91,8 @@ The endpoint is protected by:
 
 ## Editing content
 
-- **Site details, navigation, contact placeholders:** `lib/site.ts`
-- **Six services and deliverables:** `lib/services.ts`
+- **Site details, navigation, contact emails:** `lib/site.ts`
+- **Six services, deliverables and typical tool stacks:** `lib/services.ts`
 - **Solutions and flagship system stages:** `lib/solutions.ts`
 - **Problems, principles, process, industries, FAQs, legal date:** `lib/content.ts`
 - **Validation rules:** `lib/validation.ts`
@@ -101,23 +102,26 @@ The endpoint is protected by:
 
 ## Design system
 
-- **Palette** — white and lavender surfaces, ink `#111111`, muted grey, and a single purple accent `#6346E8` with soft lavender washes.
-- **Type** — Manrope for display, Inter for body, both loaded through `next/font`.
-- **Surfaces** — rounded cards, hairline borders, soft ambient gradients, glass panels and restrained shadows.
-- **Motion** — Lenis smooth scrolling, scroll progress, route transitions, scroll reveals and a step-through product demo. All motion respects `prefers-reduced-motion`.
-- **Accessibility** — semantic landmarks, skip link, visible focus states, labelled fields, error messages tied to inputs with `aria-describedby`, keyboard-accessible menu and accordions, and live regions for form and demo status.
+- **Palette** - white and emerald-tinted surfaces, deep green ink `#071b12`, muted green-grey copy, and a digital green accent `#0a7a56` with bright mint highlights `#22c78e` and `#7ee8c0`.
+- **Type** - Manrope for display, Inter for body, both loaded through `next/font`.
+- **Surfaces** - rounded cards, hairline borders, soft ambient gradients, glass panels and restrained shadows.
+- **Motion** - Lenis smooth scrolling, scroll progress, route transitions, scroll reveals, generated artwork and a step-through product demo. All motion respects `prefers-reduced-motion`.
+- **Accessibility** - semantic landmarks, skip link, visible focus states, labelled fields, error messages tied to inputs with `aria-describedby`, keyboard-accessible menu and accordions, and live regions for form and demo status.
 
 ---
 
-## Placeholders to confirm before launch
+## Confirmed details
 
-These are intentionally marked in the interface and must be confirmed by the business:
+- **Canonical domain:** `https://khairaco.space` in `lib/site.ts`. This drives canonical URLs, the sitemap, robots and social metadata.
+- **New business email:** `grow@khairaco.space`.
+- **General email:** `info@khairaco.space`.
+- **LinkedIn:** the unconfirmed placeholder has been removed. Add a verified company page when it is available.
 
-- **Canonical domain:** `https://khaira-co.eu` in `lib/site.ts` — confirm this is the launch domain, as it drives canonical URLs, the sitemap, robots and social metadata
-- **Email:** `hello@khaira-co.eu` — marked “To confirm”
-- **LinkedIn:** `https://www.linkedin.com/company/khaira-co` — marked “To confirm”
-- **Registered company details and business address** — not yet published; referenced as “to be confirmed” in the legal pages
-- **Legal pages** — privacy and terms are generic, defensible templates. They should be reviewed by a qualified adviser before launch.
+## Still to confirm before launch
+
+- **Registered company details and business address** - not yet published; referenced as "to be confirmed" in the legal pages.
+- **Legal pages** - privacy and terms are generic, defensible templates. They should be reviewed by a qualified adviser before launch.
+- **Resend sender verification** - the `khairaco.space` domain must be verified in Resend before live email delivery.
 
 No testimonials, client logos, performance statistics or case-study results have been fabricated. The dashboard and demo use clearly labelled example data.
 
@@ -129,16 +133,15 @@ The site is ready for a standard Next.js host such as Vercel. Add the three envi
 
 Before going live:
 
-1. Confirm the email address and LinkedIn URL in `lib/site.ts`.
-2. Add the real registered company details to the legal pages.
-3. Have the privacy policy and terms reviewed.
-4. Configure Resend and verify the sender domain.
-5. Submit `https://khaira-co.eu/sitemap.xml` in Google Search Console.
+1. Add the real registered company details to the legal pages.
+2. Have the privacy policy and terms reviewed.
+3. Configure Resend and verify the `khairaco.space` sender domain.
+4. Submit `https://khairaco.space/sitemap.xml` in Google Search Console.
 
 ---
 
 ## Notes
 
 - All visuals are CSS/SVG-generated; there are no external image dependencies.
-- The demo company “Northbridge Advisory” and all demo metrics are illustrative.
+- The demo company "Northbridge Advisory" and all demo metrics are illustrative.
 - The old `index.html`, `css/`, `js/`, `assets/` and Blemince marketing files at the repository root belong to earlier projects and are not used by the Next.js app.

@@ -38,7 +38,7 @@ export default function TermsPage() {
       <h2 id="about-these-terms">1. About these terms</h2>
       <p>
         These terms govern your use of the Khaira.co website at{" "}
-        <a href="https://khaira-co.eu">khaira-co.eu</a> and, where relevant, the
+        <a href="https://khairaco.space">khairaco.space</a> and, where relevant, the
         services we provide. By using this website, you agree to these terms. If
         you do not agree, please do not use the website.
       </p>
@@ -226,9 +226,9 @@ export default function TermsPage() {
         provide the work completed to that point in a reasonable format.
       </p>
       <p>
-        Provisions that by their nature should survive termination — including
+        Provisions that by their nature should survive termination, including
         confidentiality, intellectual property, payment obligations and
-        liability — will continue to apply.
+        liability, will continue to apply.
       </p>
 
       <h2 id="governing-law">11. Governing law</h2>

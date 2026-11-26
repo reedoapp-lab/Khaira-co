@@ -9,18 +9,18 @@ import { CtaSection } from "@/components/cta-section";
 import { ArtPanel, ConstellationMap } from "@/components/artwork";
 
 export const metadata: Metadata = {
-  title: "About — A B2B Growth & Automation Agency",
+  title: "About | The Growth Partner for Consulting Firms",
   description:
-    "Khaira.co is a B2B growth and automation agency for consulting firms and professional service businesses. We connect strategy, technology and execution.",
+    "Khaira.co is the growth and automation partner for consulting firms. We connect strategy, CRM, AI and execution to turn more enquiries into booked meetings.",
   alternates: { canonical: "/about" },
 };
 
 const idealFit = [
-  "2–50 people, based in the UK or Europe",
+  "2 to 50 people, based in the UK or Europe",
   "A proven offer and some existing inbound demand",
   "Enquiries arriving through more than one channel",
-  "Follow-up that depends on memory or individual effort",
-  "A desire to improve conversion before increasing spend",
+  "A CRM or follow-up process that has become inconsistent",
+  "A team that wants to improve conversion before increasing spend",
 ];
 
 const notFor = [
@@ -36,11 +36,11 @@ export default function AboutPage() {
         eyebrow="About Khaira.co"
         title={
           <>
-            We build the systems behind{" "}
-            <span className="text-brand">sustainable growth.</span>
+            We build the growth system behind firms that{" "}
+            <span className="text-brand">sell expertise.</span>
           </>
         }
-        description="Khaira.co is a B2B growth and automation agency for consulting firms and professional service businesses. We connect strategy, technology and execution."
+        description="Khaira.co is the growth and automation partner for consulting, advisory, IT and professional service firms. We connect strategy, CRM, AI and execution, then stay accountable for the outcome."
         actions={
           <>
             <CtaLink href="/contact" size="lg">
@@ -80,7 +80,7 @@ export default function AboutPage() {
           <div className="lg:col-span-7">
             <p className="max-w-2xl text-base leading-relaxed text-muted md:text-lg">
               A firm can have a strong offer, a credible team and a healthy flow
-              of referrals — and still lose opportunities because the path from
+              of referrals, and still lose opportunities because the path from
               first enquiry to booked conversation is fragmented.
             </p>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">
@@ -91,15 +91,16 @@ export default function AboutPage() {
             </p>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">
               We built Khaira.co to fix that path. Our work sits between
-              commercial strategy and implementation: we define the
-              opportunity, design the system, build it, and measure what
-              changes.
+              commercial strategy and implementation: we define the opportunity,
+              design the system, build it, and measure what changes. We use the
+              tools your team already has, and we only add technology when it
+              earns its place.
             </p>
 
             <div className="mt-8 rounded-2xl border border-line bg-surface p-5 md:p-6">
               <p className="text-sm leading-relaxed text-ink">
-                &ldquo;We build systems that turn business opportunities into
-                measurable growth.&rdquo;
+                &ldquo;We build the growth system that turns interest into
+                booked meetings.&rdquo;
               </p>
               <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-faint">
                 The Khaira.co positioning
@@ -226,9 +227,9 @@ export default function AboutPage() {
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted">
                     AI should make the business clearer, not more complicated.
-                    We use it where it removes genuine friction — research,
-                    triage, drafting, summarising, repetitive communication —
-                    and keep human judgement in the decisions that matter.
+                    We use OpenAI and Claude for research, triage, drafting and
+                    summarising, with retrieval over your own documents and
+                    human judgement in the decisions that matter.
                   </p>
                 </div>
               </div>
@@ -245,8 +246,9 @@ export default function AboutPage() {
               Built for expertise-led businesses.
             </h2>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted">
-              We work with firms where trust, responsiveness and follow-through
-              win the work.
+              We work with consulting, advisory, IT, recruitment and
+              professional service firms where trust, responsiveness and
+              follow-through win the work.
             </p>
           </div>
           <div className="lg:col-span-8">

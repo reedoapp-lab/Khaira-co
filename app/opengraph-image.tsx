@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "Khaira.co — B2B growth and intelligent automation for consulting firms";
+  "Khaira.co | The growth system for consulting firms";
 export const size = {
   width: 1200,
   height: 630,
@@ -109,7 +109,7 @@ export default function Image() {
           </div>
 
           <div style={{ display: "flex", fontSize: 13, letterSpacing: "2.6px", textTransform: "uppercase", color: "#607a6d", fontWeight: 600 }}>
-            B2B growth × intelligent automation
+            The growth system for consulting firms
           </div>
         </div>
 
@@ -125,8 +125,9 @@ export default function Image() {
             maxWidth: 540,
           }}
         >
-          We build growth and automation systems for consulting firms and
-          professional service businesses.
+          We connect your website, CRM, inbox and calendar into one AI-assisted
+          system that captures every enquiry, follows up in minutes, and books
+          more qualified meetings.
         </div>
 
         <div
@@ -184,7 +185,7 @@ export default function Image() {
                 color: "#071b12",
               }}
             >
-              Turn more opportunities into revenue.
+              Turn interest into revenue.
             </div>
             <div
               style={{
@@ -196,8 +197,9 @@ export default function Image() {
                 maxWidth: 540,
               }}
             >
-              We build growth and automation systems for consulting firms and
-              professional service businesses.
+              We connect your website, CRM, inbox and calendar into one
+              AI-assisted system that captures every enquiry, follows up in
+              minutes, and books more qualified meetings.
             </div>
             <div style={{ display: "flex", gap: 10, marginTop: 28 }}>
               {["Discovery", "Design", "Build", "Launch"].map(
@@ -383,7 +385,7 @@ export default function Image() {
             color: "#607a6d",
           }}
         >
-          <div style={{ display: "flex" }}>khaira-co.eu</div>
+          <div style={{ display: "flex" }}>khairaco.space</div>
           <div style={{ display: "flex" }}>Consulting firms & professional service businesses</div>
         </div>
       </div>

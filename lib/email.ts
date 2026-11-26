@@ -112,7 +112,7 @@ export async function sendEnquiryNotification(
         from,
         to: [to],
         reply_to: enquiry.email,
-        subject: `New enquiry — ${enquiry.company} — ${enquiry.service}`,
+        subject: `New enquiry: ${enquiry.company} - ${enquiry.service}`,
         text: buildText(enquiry),
         html: buildHtml(enquiry),
       }),
@@ -121,7 +121,7 @@ export async function sendEnquiryNotification(
 
     if (!response.ok) {
       console.error(
-        "[khaira] Email delivery failed — enquiry retained below",
+        "[khaira] Email delivery failed. Enquiry retained below",
         response.status,
         await response.text(),
         enquiry,
@@ -132,7 +132,7 @@ export async function sendEnquiryNotification(
     return { delivered: true, configured: true };
   } catch (error) {
     console.error(
-      "[khaira] Email delivery error — enquiry retained below",
+      "[khaira] Email delivery error. Enquiry retained below",
       error,
       enquiry,
     );

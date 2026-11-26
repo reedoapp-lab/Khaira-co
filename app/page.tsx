@@ -25,6 +25,7 @@ import {
   OrbitDiagram,
   SignalField,
 } from "@/components/artwork";
+import { BotSwarm } from "@/components/bot-artwork";
 import {
   DifferentiatorIcon,
   ProblemIcon,
@@ -33,16 +34,26 @@ import {
 } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "B2B Growth & Automation for Consulting Firms",
+  title: "The Growth System for Consulting Firms",
   description:
-    "Khaira.co helps consulting firms and professional service businesses capture more enquiries, automate follow-up and build smarter systems for sustainable growth.",
+    "Khaira.co is the growth system for consulting firms. Capture more qualified enquiries, automate follow-up with AI, and turn interest into booked meetings. Built on HubSpot, Pipedrive, n8n, OpenAI and Next.js.",
+  keywords: [
+    "growth system for consulting firms",
+    "B2B lead generation for consultants",
+    "CRM automation for professional services",
+    "AI agents for consulting firms",
+    "enquiry to meeting system",
+    "HubSpot automation agency",
+    "n8n workflow automation",
+    "conversion website for consultants",
+  ],
   alternates: { canonical: "/" },
 };
 
 const capabilities = [
   { label: "Lead Generation", icon: "target" as const },
-  { label: "Sales Automation", icon: "workflow" as const },
-  { label: "Conversion Systems", icon: "monitor" as const },
+  { label: "CRM & Follow-up", icon: "workflow" as const },
+  { label: "AI Agents", icon: "sparkles" as const },
 ];
 
 export default function HomePage() {
@@ -65,7 +76,7 @@ export default function HomePage() {
                   <div className="flex items-center gap-3">
                     <span aria-hidden className="h-px w-8 bg-brand/40" />
                     <p className="eyebrow">
-                      Digital growth × intelligent automation
+                      Built for consulting, advisory and professional service firms
                     </p>
                   </div>
 
@@ -73,14 +84,17 @@ export default function HomePage() {
                     id="hero-title"
                     className="display mt-6 max-w-xl text-[clamp(2.7rem,5.2vw,4.6rem)]"
                   >
-                    Turn more opportunities into{" "}
-                    <span className="text-gradient-brand">revenue.</span>
+                    The only growth system your firm needs to{" "}
+                    <span className="text-gradient-brand">
+                      turn interest into revenue.
+                    </span>
                   </h1>
 
                   <p className="mt-6 max-w-lg text-base leading-relaxed text-muted md:text-lg">
-                    We help ambitious consulting firms and professional service
-                    businesses capture more enquiries, automate follow-ups and
-                    build smarter systems for sustainable growth.
+                    We connect your website, CRM, inbox and calendar into one
+                    AI-assisted flow that captures every enquiry, replies in
+                    minutes, and books more qualified meetings. Built for firms
+                    that sell expertise.
                   </p>
 
                   <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -97,7 +111,7 @@ export default function HomePage() {
                   </div>
 
                   <p className="mt-4 text-[11px] text-faint">
-                    30-minute consultation · No obligation
+                    30-minute working conversation. No pitch deck. No obligation.
                   </p>
 
                   <div className="mt-8 grid gap-3 border-t border-line pt-5 sm:grid-cols-3">
@@ -118,6 +132,11 @@ export default function HomePage() {
                       </div>
                     ))}
                   </div>
+
+                  <p className="mt-5 text-[10px] font-medium uppercase tracking-[0.14em] text-faint">
+                    Typical stack: HubSpot · Pipedrive · Salesforce · n8n ·
+                    OpenAI · Next.js
+                  </p>
                 </div>
 
                 <div className="min-w-0 lg:col-span-6">
@@ -133,15 +152,15 @@ export default function HomePage() {
       <section className="border-b border-line bg-white">
         <div className="container-x flex flex-col gap-3 py-5 md:flex-row md:items-center md:justify-between">
           <p className="text-xs leading-relaxed text-muted">
-            We build systems that turn business opportunities into measurable
-            growth.
+            We build the growth system that turns interest into booked
+            meetings, not another pile of disconnected tools.
           </p>
           <div className="flex flex-wrap gap-x-5 gap-y-1.5 text-[10px] font-medium uppercase tracking-[0.14em] text-faint">
             <span>Lead generation</span>
             <span aria-hidden>·</span>
             <span>CRM automation</span>
             <span aria-hidden>·</span>
-            <span>AI workflows</span>
+            <span>AI agents</span>
             <span aria-hidden>·</span>
             <span>Conversion websites</span>
           </div>
@@ -157,20 +176,21 @@ export default function HomePage() {
               id="problem-title"
               className="display mt-6 text-[clamp(2.2rem,4.4vw,3.7rem)]"
             >
-              Your business doesn&apos;t need more complexity. It needs{" "}
-              <span className="text-brand">better systems.</span>
+              You don&apos;t have a lead problem. You have a{" "}
+              <span className="text-brand">follow-through problem.</span>
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-muted">
-              Most firms don&apos;t have a lead problem. They have a
-              follow-through problem. Enquiries arrive through different
-              channels, get handled inconsistently, and quietly go cold.
+              Most firms don&apos;t lose work because the market is quiet. They
+              lose it because an enquiry sits in an inbox, a referral gets a
+              reply three days later, and a proposal goes cold while everyone
+              assumes someone else is handling it.
             </p>
             <div className="mt-8">
               <CtaLink
                 href="/solutions#enquiry-to-meeting"
                 variant="link"
               >
-                See how the system works
+                See the system that fixes it
               </CtaLink>
             </div>
           </div>
@@ -214,8 +234,9 @@ export default function HomePage() {
                     className="mt-0.5 h-4 w-4 shrink-0 text-brand"
                     strokeWidth={1.7}
                   />
-                  Khaira connects these into one visible system — so every
+                  Khaira connects these into one visible system, so every
                   enquiry has an owner, a next step and a measurable outcome.
+                  Website, CRM, inbox, calendar and reporting, working as one.
                 </p>
               </div>
             </Reveal>
@@ -236,12 +257,16 @@ export default function HomePage() {
                 id="services-title"
                 className="display mt-6 max-w-2xl text-[clamp(2.2rem,4.4vw,3.7rem)]"
               >
-                Everything your business needs to grow smarter.
+                Six capabilities. One growth system.{" "}
+                <span className="text-brand">
+                  Built to outperform the patchwork.
+                </span>
               </h2>
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-muted">
-              Six capabilities that work together. Start with the piece that is
-              holding you back, or connect the whole growth engine.
+              Every service removes a specific bottleneck. Together they
+              connect your website, CRM, inbox, calendar and reporting into one
+              visible path from interest to revenue.
             </p>
           </div>
 
@@ -294,6 +319,17 @@ export default function HomePage() {
                     ))}
                   </ul>
 
+                  <div className="mt-5 flex flex-wrap gap-1.5">
+                    {service.stack.slice(0, 3).map((tool) => (
+                      <span
+                        key={tool}
+                        className="rounded-full border border-line bg-surface px-2 py-0.5 text-[9px] font-medium text-muted"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+
                   <span className="mt-auto inline-flex items-center gap-1.5 pt-6 text-xs font-medium text-brand">
                     Learn more
                     <ArrowUpRight
@@ -336,7 +372,7 @@ export default function HomePage() {
                   </span>
                 </h2>
                 <p className="mt-4 max-w-md text-sm leading-relaxed text-white/60 md:text-base">
-                  Capture, qualification, follow-up and booking — connected in
+                  Capture, qualification, follow-up and booking, connected in
                   one system you can see, measure and improve.
                 </p>
               </div>
@@ -367,6 +403,84 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* AI agents */}
+      <section aria-labelledby="agents-title" className="section-pad bg-surface">
+        <div className="container-x grid gap-10 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-5">
+            <SectionLabel index="03">Intelligent automation</SectionLabel>
+            <h2
+              id="agents-title"
+              className="display mt-6 text-[clamp(2.2rem,4.4vw,3.6rem)]"
+            >
+              Green bots.{" "}
+              <span className="text-brand">Human judgement.</span>
+            </h2>
+            <p className="mt-6 max-w-md text-base leading-relaxed text-muted">
+              We build AI agents that qualify, route, draft and follow up
+              inside the tools your team already uses. That means OpenAI or
+              Claude for reasoning, n8n or Make for orchestration, and retrieval
+              over your own documents. Every action is logged. Every decision
+              that carries risk stays with a person.
+            </p>
+            <ul className="mt-6 space-y-3">
+              {[
+                "Agents read the enquiry, score the fit and route it to the right owner.",
+                "Drafts, summaries and next-step suggestions are generated from your own context.",
+                "Approval points are built in, so your team stays accountable for the outcome.",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-2.5 text-sm leading-relaxed text-muted"
+                >
+                  <Check
+                    aria-hidden
+                    className="mt-0.5 h-4 w-4 shrink-0 text-brand"
+                    strokeWidth={2}
+                  />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <CtaLink href="/services#ai-integration">
+                See AI Integration
+              </CtaLink>
+              <CtaLink href="/contact" variant="link">
+                Talk about your workflow
+              </CtaLink>
+            </div>
+          </div>
+
+          <div className="lg:col-span-7">
+            <ArtPanel
+              art={<BotSwarm />}
+              label="Agent mesh"
+              className="aspect-[16/10]"
+            >
+              <div className="hidden h-full flex-col justify-end p-5 sm:flex md:p-6">
+                <div className="flex flex-wrap gap-2">
+                  {["Qualify", "Route", "Draft", "Follow up", "Book"].map(
+                    (step) => (
+                      <span
+                        key={step}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.06] px-3 py-1.5 text-[10px] font-medium text-white/80 backdrop-blur"
+                      >
+                        <span className="h-1 w-1 rounded-full bg-brand-soft" />
+                        {step}
+                      </span>
+                    ),
+                  )}
+                </div>
+              </div>
+            </ArtPanel>
+            <p className="mt-3 text-[10px] leading-relaxed text-faint">
+              Conceptual agent mesh. Built on your CRM, inbox, calendar and
+              knowledge base, with human approval where it matters.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Flagship solution */}
       <section
         id="flagship"
@@ -379,7 +493,7 @@ export default function HomePage() {
         <div className="container-x relative z-10">
           <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-7">
-              <SectionLabel index="03">Our signature solution</SectionLabel>
+              <SectionLabel index="04">Our signature solution</SectionLabel>
               <h2
                 id="flagship-title"
                 className="display mt-6 max-w-3xl text-[clamp(2.2rem,4.6vw,3.9rem)]"
@@ -391,9 +505,27 @@ export default function HomePage() {
             <div className="lg:col-span-5">
               <p className="text-sm leading-relaxed text-muted md:text-base">
                 The Khaira Enquiry-to-Meeting System captures, organises and
-                follows up with every lead — so your team can focus on the
-                conversation, not the admin.
+                follows up with every lead, so your team can focus on the
+                conversation, not the admin. It runs on your CRM, inbox and
+                calendar, with AI where it earns its place.
               </p>
+              <div className="mt-4 flex flex-wrap gap-1.5">
+                {[
+                  "HubSpot / Pipedrive",
+                  "n8n / Make",
+                  "Gmail / Outlook",
+                  "Calendly",
+                  "Slack",
+                  "OpenAI",
+                ].map((tool) => (
+                  <span
+                    key={tool}
+                    className="rounded-full border border-line bg-white px-2.5 py-1 text-[9px] font-medium text-muted"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
               <div className="mt-5">
                 <CtaLink href="/solutions#enquiry-to-meeting">
                   Explore the System
@@ -454,7 +586,7 @@ export default function HomePage() {
             <LeadDemo />
           </div>
           <p className="mt-4 text-center text-[10px] leading-relaxed text-faint">
-            Built on the tools you already use — your CRM, inbox and calendar.
+            Built on the tools you already use. Your CRM, inbox and calendar.
             Example data shown.
           </p>
         </div>
@@ -468,18 +600,19 @@ export default function HomePage() {
         <div className="container-x">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
-              <SectionLabel index="04">How we work</SectionLabel>
+              <SectionLabel index="05">How we work</SectionLabel>
               <h2
                 id="process-title"
                 className="display mt-6 text-[clamp(2.2rem,4.4vw,3.7rem)]"
               >
-                Simple process.{" "}
-                <span className="text-brand">Smarter execution.</span>
+                Four stages. One working system.{" "}
+                <span className="text-brand">No six-month discovery.</span>
               </h2>
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-muted">
-              A clear, senior-led process that moves from understanding to
-              implementation without a six-month discovery phase.
+              Every engagement is scoped around a commercial problem. We define
+              the outcome, build the smallest useful system, and measure whether
+              it worked. You see the work as it happens.
             </p>
           </div>
 
@@ -534,23 +667,24 @@ export default function HomePage() {
       >
         <div className="container-x grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <SectionLabel index="05">Why Khaira.co</SectionLabel>
+            <SectionLabel index="06">Why Khaira.co</SectionLabel>
             <h2
               id="why-title"
               className="display mt-6 text-[clamp(2.2rem,4.4vw,3.6rem)]"
             >
-              Technology is only valuable when it solves a real business
-              problem.
+              Most agencies sell activity. We build the system that{" "}
+              <span className="text-brand">produces the outcome.</span>
             </h2>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-muted md:text-base">
               We are not interested in automation for its own sake. Every
-              workflow we build should make the business clearer, faster or
-              more consistent.
+              workflow should make the business clearer, faster or more
+              consistent. If it does not save time, improve conversion or give
+              you a better view of the pipeline, we do not build it.
             </p>
             <div className="mt-8 rounded-2xl border border-line bg-white p-5 md:p-6">
               <p className="text-sm leading-relaxed text-ink">
-                If a system doesn&apos;t save time, improve conversion or give
-                you a clearer view of the business, we don&apos;t build it.
+                The measure is simple: fewer manual handoffs, faster response,
+                more booked conversations.
               </p>
             </div>
           </div>
@@ -589,7 +723,7 @@ export default function HomePage() {
       >
         <div className="container-x grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <SectionLabel index="06">Industries</SectionLabel>
+            <SectionLabel index="07">Industries</SectionLabel>
             <h2
               id="industries-title"
               className="display mt-6 text-[clamp(2.2rem,4.2vw,3.5rem)]"
@@ -597,8 +731,9 @@ export default function HomePage() {
               Built for businesses that sell expertise.
             </h2>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted md:text-base">
-              We work with firms where trust, responsiveness and follow-through
-              win the work.
+              We work with consulting, advisory, IT, recruitment and
+              professional service firms where trust, responsiveness and
+              follow-through win the work.
             </p>
             <div className="mt-8 rounded-2xl border border-line bg-surface p-5">
               <p className="text-sm font-medium text-ink">
@@ -652,8 +787,8 @@ export default function HomePage() {
 
       <CtaSection
         eyebrow="Next step"
-        title="Ready to build a smarter growth engine?"
-        description="Let's identify where your business is losing opportunities and build a system that helps you convert more of them."
+        title="Ready to stop losing good enquiries?"
+        description="Bring us the bottleneck. In 30 minutes, we will map how your enquiries move today and show you the smallest useful system to fix it."
         primaryLabel="Book Your Free Consultation"
         primaryHref="/contact"
         secondaryLabel="Tell Us About Your Business"

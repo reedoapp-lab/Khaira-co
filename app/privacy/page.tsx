@@ -39,7 +39,7 @@ export default function PrivacyPage() {
         Khaira.co is a B2B growth and automation agency. In this policy,
         &ldquo;Khaira.co&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo; and
         &ldquo;our&rdquo; refer to the business operating this website at{" "}
-        <a href="https://khaira-co.eu">khaira-co.eu</a>.
+        <a href="https://khairaco.space">khairaco.space</a>.
       </p>
       <p>
         Khaira.co is the trading name used on this website. Registered company

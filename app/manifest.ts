@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Khaira.co — B2B Growth & Automation",
+    name: "Khaira.co | The Growth System for Consulting Firms",
     short_name: "Khaira.co",
     description: site.description,
     start_url: "/",
@@ -12,15 +12,15 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#0a7a56",
     icons: [
       {
-        src: "/icon.svg",
-        sizes: "any",
-        type: "image/svg+xml",
+        src: "/icon.png",
+        sizes: "512x512",
+        type: "image/png",
         purpose: "any",
       },
       {
-        src: "/icon.svg",
-        sizes: "any",
-        type: "image/svg+xml",
+        src: "/apple-icon.png",
+        sizes: "180x180",
+        type: "image/png",
         purpose: "maskable",
       },
     ],

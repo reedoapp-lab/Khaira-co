@@ -172,7 +172,7 @@ function CapturePanel() {
           </div>
         </div>
       </div>
-      <StatusToast label="Enquiry captured — no manual entry required" />
+      <StatusToast label="Enquiry captured. No manual entry required" />
     </PanelFrame>
   );
 }
@@ -340,7 +340,7 @@ function EngagePanel() {
           </p>
         </div>
       </div>
-      <StatusToast label="Follow-up scheduled — no reminders needed" />
+      <StatusToast label="Follow-up scheduled. No reminders needed" />
     </PanelFrame>
   );
 }
@@ -417,7 +417,7 @@ function ConvertPanel() {
             </p>
             <p className="flex items-center gap-1.5">
               <Clock className="h-3 w-3 text-emerald-600" strokeWidth={1.7} />
-              14:00 – 14:30
+              14:00 to 14:30
             </p>
             <p className="flex items-center gap-1.5">
               <Building2 className="h-3 w-3 text-emerald-600" strokeWidth={1.7} />
@@ -434,7 +434,7 @@ function ConvertPanel() {
           </div>
         </div>
       </div>
-      <StatusToast label="Meeting booked — calendar invite sent automatically" />
+      <StatusToast label="Meeting booked. Calendar invite sent automatically" />
     </PanelFrame>
   );
 }
@@ -444,7 +444,7 @@ function MeasurePanel() {
     { label: "Enquiries", value: "48", change: "+12%" },
     { label: "Qualified", value: "21", change: "+8%" },
     { label: "Meetings", value: "9", change: "+3" },
-    { label: "Response", value: "2m", change: "−38%" },
+    { label: "Response", value: "2m", change: "-38%" },
   ];
 
   return (
@@ -505,7 +505,7 @@ function MeasurePanel() {
           </div>
         </div>
 
-        <StatusToast label="Dashboard updated — pipeline visibility in one place" />
+        <StatusToast label="Dashboard updated. Pipeline visibility in one place" />
       </div>
     </PanelFrame>
   );
@@ -705,7 +705,7 @@ export function LeadDemo() {
           <div className="mt-4 hidden rounded-xl border border-line bg-surface/60 p-3 lg:block">
             <p className="text-[9px] font-medium text-ink">What this shows</p>
             <p className="mt-1.5 text-[9px] leading-relaxed text-muted">
-              A lead moving from a website enquiry to a booked meeting — with
+              A lead moving from a website enquiry to a booked meeting, with
               the follow-up and reporting handled by the system.
             </p>
           </div>
@@ -745,7 +745,7 @@ export function LeadDemo() {
           </div>
 
           <p aria-live="polite" className="sr-only">
-            Step {active + 1} of {steps.length}: {steps[active].title} —{" "}
+            Step {active + 1} of {steps.length}: {steps[active].title}.{" "}
             {steps[active].status}.
           </p>
         </div>

@@ -89,7 +89,7 @@ html.lenis body {
   overflow: hidden;
 }
 
-/* ————— Layout & typography ————— */
+/* ----- Layout & typography ----- */
 
 .container-x {
   width: 100%;
@@ -145,7 +145,7 @@ html.lenis body {
   color: transparent;
 }
 
-/* ————— Surfaces & atmosphere ————— */
+/* ----- Surfaces & atmosphere ----- */
 
 .grid-soft {
   background-image: linear-gradient(
@@ -350,7 +350,7 @@ html.lenis body {
   transform-origin: left;
 }
 
-/* ————— Forms ————— */
+/* ----- Forms ----- */
 
 .field {
   width: 100%;
@@ -398,7 +398,7 @@ textarea.field {
   min-height: 8rem;
 }
 
-/* ————— Legal pages ————— */
+/* ----- Legal pages ----- */
 
 .legal-prose {
   color: var(--color-muted);
@@ -464,7 +464,7 @@ textarea.field {
   color: var(--color-ink);
 }
 
-/* ————— Motion ————— */
+/* ----- Motion ----- */
 
 @keyframes float-y {
   0%,
@@ -541,7 +541,7 @@ textarea.field {
   animation: orbit-spin 100s linear infinite reverse;
 }
 
-/* ————— Generated artwork motion ————— */
+/* ----- Generated artwork motion ----- */
 
 .art-drift,
 .art-drift-slow,
@@ -643,7 +643,79 @@ textarea.field {
   animation: art-beam 7s ease-in-out infinite;
 }
 
-/* ————— Cursor follower ————— */
+/* ----- Bot artwork ----- */
+
+.bot-float,
+.bot-blink,
+.bot-scan {
+  transform-box: fill-box;
+  transform-origin: center;
+  will-change: transform;
+}
+
+@keyframes bot-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+.bot-float {
+  animation: bot-float 7.5s ease-in-out infinite;
+}
+
+@keyframes bot-blink {
+  0%,
+  91%,
+  100% {
+    transform: scaleY(1);
+  }
+  93%,
+  96% {
+    transform: scaleY(0.12);
+  }
+}
+
+.bot-blink {
+  animation: bot-blink 6.5s ease-in-out infinite;
+}
+
+@keyframes bot-scan {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.55;
+  }
+  82% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translateY(660px);
+    opacity: 0;
+  }
+}
+
+.bot-scan {
+  animation: bot-scan 9s linear infinite;
+}
+
+@keyframes bot-data {
+  to {
+    stroke-dashoffset: -180;
+  }
+}
+
+.bot-data {
+  animation: bot-data 12s linear infinite;
+  will-change: stroke-dashoffset;
+}
+
+/* ----- Cursor follower ----- */
 
 .cursor-layer {
   display: none;
@@ -726,7 +798,7 @@ textarea.field {
   );
 }
 
-/* ————— Scrollbar ————— */
+/* ----- Scrollbar ----- */
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -746,7 +818,7 @@ textarea.field {
   background: #a9c9b9;
 }
 
-/* ————— Accessibility ————— */
+/* ----- Accessibility ----- */
 
 .skip-link {
   position: fixed;
@@ -803,6 +875,10 @@ textarea.field {
   .art-pulse-node,
   .art-dash,
   .art-beam,
+  .bot-float,
+  .bot-blink,
+  .bot-scan,
+  .bot-data,
   .pulse-dot {
     animation: none !important;
   }

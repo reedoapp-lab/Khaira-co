@@ -14,12 +14,11 @@ import { SectionLabel } from "@/components/section-label";
 import { ContactForm } from "@/components/contact-form";
 import { CtaLink } from "@/components/cta-link";
 import { Faq } from "@/components/faq";
-import { LinkedInIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Book a Free Consultation",
+  title: "Book a Free Growth Consultation",
   description:
-    "Tell Khaira.co about your business challenge. Book a free 30-minute consultation about lead generation, CRM automation, AI workflows or conversion systems.",
+    "Tell Khaira.co about your business challenge. Book a free 30-minute consultation about lead generation, CRM automation, AI workflows or conversion systems. We will map your current enquiry flow and stack.",
   alternates: { canonical: "/contact" },
 };
 
@@ -43,7 +42,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
             <span className="text-brand">leaking.</span>
           </>
         }
-        description="Tell us a little about your business and the challenge you are trying to solve. We will reply within one business day with a clear next step."
+        description="Tell us a little about your business and the challenge you are trying to solve. We will reply within one business day with a clear next step and a few specific questions."
       >
         <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-muted">
           <span className="inline-flex items-center gap-2">
@@ -118,37 +117,27 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                   <div>
                     <p className="flex items-center gap-1.5 text-[11px] text-faint">
                       <Mail className="h-3 w-3" strokeWidth={1.7} />
-                      Email
+                      New business
                     </p>
-                    <div className="mt-1 flex flex-wrap items-center gap-2">
-                      <a
-                        href={`mailto:${site.contact.email}`}
-                        className="text-muted transition-colors hover:text-ink"
-                      >
-                        {site.contact.email}
-                      </a>
-                      <span className="rounded-full border border-line bg-surface px-2 py-0.5 text-[9px] font-semibold uppercase tracking-[0.14em] text-faint">
-                        To confirm
-                      </span>
-                    </div>
+                    <a
+                      href={`mailto:${site.contact.email}`}
+                      className="mt-1 inline-flex text-muted transition-colors hover:text-ink"
+                    >
+                      {site.contact.email}
+                    </a>
                   </div>
 
                   <div>
-                    <p className="text-[11px] text-faint">LinkedIn</p>
-                    <div className="mt-1 flex flex-wrap items-center gap-2">
-                      <a
-                        href={site.contact.linkedin}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        className="inline-flex items-center gap-2 text-muted transition-colors hover:text-ink"
-                      >
-                        <LinkedInIcon className="h-3.5 w-3.5" />
-                        Company page
-                      </a>
-                      <span className="rounded-full border border-line bg-surface px-2 py-0.5 text-[9px] font-semibold uppercase tracking-[0.14em] text-faint">
-                        To confirm
-                      </span>
-                    </div>
+                    <p className="flex items-center gap-1.5 text-[11px] text-faint">
+                      <Mail className="h-3 w-3" strokeWidth={1.7} />
+                      General
+                    </p>
+                    <a
+                      href={`mailto:${site.contact.infoEmail}`}
+                      className="mt-1 inline-flex text-muted transition-colors hover:text-ink"
+                    >
+                      {site.contact.infoEmail}
+                    </a>
                   </div>
 
                   <div>
@@ -189,7 +178,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
               Good to know.
             </h2>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted">
-              A few answers that may save you a question — or make the first
+              A few answers that may save you a question, or make the first
               conversation more useful.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">

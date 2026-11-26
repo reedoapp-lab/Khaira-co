@@ -11,7 +11,6 @@ import { cn } from "@/lib/utils";
 import { EASE } from "@/lib/motion";
 import { Logo } from "@/components/logo";
 import { CtaLink } from "@/components/cta-link";
-import { LinkedInIcon } from "@/components/icons";
 
 const featuredServices = services.slice(0, 3);
 
@@ -266,26 +265,23 @@ export default function SiteHeader() {
               </div>
 
               <div className="mt-10 border-t border-line pt-6 pb-4">
-                <div className="flex flex-wrap items-center gap-3">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-faint">
+                  Contact
+                </p>
+                <div className="mt-3 flex flex-col gap-2">
                   <a
                     href={`mailto:${site.contact.email}`}
                     className="text-sm text-muted transition-colors hover:text-ink"
                   >
                     {site.contact.email}
                   </a>
-                  <span className="rounded-full border border-line bg-surface px-2 py-0.5 text-[9px] font-semibold uppercase tracking-[0.14em] text-faint">
-                    To confirm
-                  </span>
+                  <a
+                    href={`mailto:${site.contact.infoEmail}`}
+                    className="text-sm text-muted transition-colors hover:text-ink"
+                  >
+                    {site.contact.infoEmail}
+                  </a>
                 </div>
-                <a
-                  href={site.contact.linkedin}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="mt-4 inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-ink"
-                >
-                  <LinkedInIcon className="h-4 w-4" />
-                  LinkedIn
-                </a>
               </div>
             </div>
           </motion.div>

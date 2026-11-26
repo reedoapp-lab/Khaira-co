@@ -65,9 +65,6 @@ export default function NotFound() {
             >
               {site.contact.email}
             </a>
-            <span className="rounded-full border border-line bg-white px-2 py-0.5 text-[9px] font-semibold uppercase tracking-[0.14em] text-faint">
-              Email to confirm
-            </span>
           </div>
         </div>
       </div>

@@ -3,7 +3,6 @@ import { ArrowUp } from "lucide-react";
 import { site } from "@/lib/site";
 import { services } from "@/lib/services";
 import { Logo } from "@/components/logo";
-import { LinkedInIcon } from "@/components/icons";
 
 export default function SiteFooter() {
   const year = new Date().getFullYear();
@@ -20,22 +19,6 @@ export default function SiteFooter() {
             <p className="mt-6 text-[11px] font-medium uppercase tracking-[0.16em] text-faint">
               Based in {site.location}
             </p>
-
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <a
-                href={site.contact.linkedin}
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label="Khaira.co on LinkedIn (placeholder link)"
-                className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-3.5 py-2 text-xs font-medium text-muted transition-colors hover:border-brand/30 hover:text-ink"
-              >
-                <LinkedInIcon className="h-3.5 w-3.5" />
-                LinkedIn
-              </a>
-              <span className="rounded-full border border-line bg-white px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-faint">
-                Link to confirm
-              </span>
-            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-7">
@@ -83,29 +66,21 @@ export default function SiteFooter() {
               <p className="eyebrow text-[10px] text-muted">Contact</p>
               <div className="mt-4 space-y-4 text-sm">
                 <div>
-                  <p className="text-[11px] text-faint">Email</p>
-                  <div className="mt-1 flex flex-wrap items-center gap-2">
-                    <a
-                      href={`mailto:${site.contact.email}`}
-                      className="text-muted transition-colors hover:text-ink"
-                    >
-                      {site.contact.email}
-                    </a>
-                    <span className="rounded-full border border-line bg-white px-2 py-0.5 text-[9px] font-semibold uppercase tracking-[0.14em] text-faint">
-                      To confirm
-                    </span>
-                  </div>
+                  <p className="text-[11px] text-faint">New business</p>
+                  <a
+                    href={`mailto:${site.contact.email}`}
+                    className="mt-1 inline-flex text-muted transition-colors hover:text-ink"
+                  >
+                    {site.contact.email}
+                  </a>
                 </div>
                 <div>
-                  <p className="text-[11px] text-faint">LinkedIn</p>
+                  <p className="text-[11px] text-faint">General</p>
                   <a
-                    href={site.contact.linkedin}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="mt-1 inline-flex items-center gap-2 text-muted transition-colors hover:text-ink"
+                    href={`mailto:${site.contact.infoEmail}`}
+                    className="mt-1 inline-flex text-muted transition-colors hover:text-ink"
                   >
-                    <LinkedInIcon className="h-3.5 w-3.5" />
-                    Company page
+                    {site.contact.infoEmail}
                   </a>
                 </div>
                 <div>

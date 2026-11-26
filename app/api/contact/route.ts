@@ -78,7 +78,7 @@ export async function POST(request: Request) {
 
   if (challenge.length < 20) {
     errors.challenge =
-      "Please give us a little more detail — at least a sentence.";
+      "Please give us a little more detail, at least a sentence.";
   } else if (challenge.length > 5000) {
     errors.challenge = "Please keep the description under 5,000 characters.";
   }

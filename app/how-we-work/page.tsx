@@ -15,9 +15,9 @@ import { CtaSection } from "@/components/cta-section";
 import { ArtPanel, OrbitDiagram } from "@/components/artwork";
 
 export const metadata: Metadata = {
-  title: "How We Work — A Clear Growth Systems Process",
+  title: "How We Work | A Growth System in Four Stages",
   description:
-    "A clear, senior-led process for building growth systems: discover, strategise, build and optimise. See how Khaira.co turns a commercial problem into a working system.",
+    "A senior-led process for building growth systems: discover, strategise, build and optimise. See how Khaira.co turns a commercial problem into a working system with CRM, automation and AI.",
   alternates: { canonical: "/how-we-work" },
 };
 
@@ -28,11 +28,11 @@ export default function HowWeWorkPage() {
         eyebrow="How we work"
         title={
           <>
-            Simple process.{" "}
-            <span className="text-brand">Smarter execution.</span>
+            A clear process. A working system.{" "}
+            <span className="text-brand">No theatre.</span>
           </>
         }
-        description="A clear, senior-led process that moves from understanding to implementation without a six-month discovery phase."
+        description="A senior-led process that moves from understanding to implementation. We scope the constraint, build the smallest useful system, and measure whether it worked."
         actions={
           <>
             <CtaLink href="/contact" size="lg">
@@ -55,7 +55,7 @@ export default function HowWeWorkPage() {
               </h2>
               <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted md:text-base">
                 Every engagement is structured around a clear commercial
-                problem. We define the outcome, build the smallest useful
+                problem. We define the outcome, choose the stack, build the
                 system, and measure whether it worked.
               </p>
               <div className="mt-7">
@@ -191,7 +191,7 @@ export default function HowWeWorkPage() {
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-muted">
               We will recommend a focused audit, a defined build or an ongoing
-              partnership based on the problem — not on a fixed package.
+              partnership based on the problem, not on a fixed package.
             </p>
           </div>
 
@@ -213,7 +213,7 @@ export default function HowWeWorkPage() {
                     {model.description}
                   </p>
                   <p className="mt-4 text-xs leading-relaxed text-muted">
-                    <span className="font-medium text-ink">Best for — </span>
+                    <span className="font-medium text-ink">Best for: </span>
                     {model.bestFor}
                   </p>
                   <ul className="mt-5 space-y-2 border-t border-line pt-4">
@@ -268,7 +268,7 @@ export default function HowWeWorkPage() {
       <CtaSection
         eyebrow="Ready to start?"
         title="Bring us the problem. We will map the system."
-        description="A 30-minute working conversation is enough to understand whether we can help — and what the most useful first step would be."
+        description="A 30-minute working conversation is enough to understand whether we can help and what the most useful first step would be."
         primaryLabel="Book Your Free Consultation"
         primaryHref="/contact"
         secondaryLabel="Explore solutions"

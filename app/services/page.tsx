@@ -11,11 +11,21 @@ import { ServiceIcon } from "@/components/icons";
 import { Faq } from "@/components/faq";
 import { CtaSection } from "@/components/cta-section";
 import { ArtPanel, SignalField } from "@/components/artwork";
+import { BotCore } from "@/components/bot-artwork";
 
 export const metadata: Metadata = {
-  title: "Services — Lead Generation, CRM Automation & AI",
+  title: "Services | Lead Generation, CRM Automation & AI for Consulting Firms",
   description:
-    "Lead generation, CRM and sales automation, AI integration, conversion-focused websites, growth strategy and custom business applications for consulting firms.",
+    "Six connected services for consulting firms: ICP lead generation, CRM and sales automation, AI agents, conversion websites, growth strategy and custom applications. Built on HubSpot, Pipedrive, n8n, OpenAI and Next.js.",
+  keywords: [
+    "lead generation for consulting firms",
+    "CRM automation for professional services",
+    "AI agents for consulting firms",
+    "HubSpot automation agency",
+    "Pipedrive automation",
+    "n8n workflow automation",
+    "conversion website design for consultants",
+  ],
   alternates: { canonical: "/services" },
 };
 
@@ -26,11 +36,11 @@ export default function ServicesPage() {
         eyebrow="Services"
         title={
           <>
-            Growth systems, built around how your business{" "}
-            <span className="text-brand">actually works.</span>
+            Growth services built around how your firm{" "}
+            <span className="text-brand">actually wins work.</span>
           </>
         }
-        description="Six connected capabilities. Each one designed to remove a specific bottleneck between interest and revenue."
+        description="Six connected capabilities. Each one removes a specific bottleneck between interest and revenue. Each one is built on tools your team can actually use."
         actions={
           <>
             <CtaLink href="/contact" size="lg">
@@ -82,8 +92,8 @@ export default function ServicesPage() {
                   </span>
                 </h2>
                 <p className="mt-3 max-w-md text-sm leading-relaxed text-white/60">
-                  Each service removes a specific bottleneck. Together they form
-                  a visible path from interest to revenue.
+                  Start with the bottleneck that is costing you the most.
+                  Connect the rest when you are ready.
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
@@ -99,6 +109,10 @@ export default function ServicesPage() {
               </div>
             </div>
           </ArtPanel>
+          <p className="mt-3 text-center text-[10px] leading-relaxed text-faint">
+            Tool stacks shown are typical examples. We recommend the smallest
+            stack that solves the problem.
+          </p>
         </div>
       </section>
 
@@ -160,6 +174,22 @@ export default function ServicesPage() {
                   {service.description}
                 </p>
 
+                <div className="mt-5">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-faint">
+                    Typical stack
+                  </p>
+                  <div className="mt-2 flex flex-wrap gap-1.5">
+                    {service.stack.map((tool) => (
+                      <span
+                        key={tool}
+                        className="rounded-full border border-line bg-white px-2.5 py-1 text-[10px] font-medium text-muted"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
                 <div className="mt-9">
                   <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-faint">
                     What&apos;s included
@@ -201,6 +231,23 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                 </div>
+
+                {service.slug === "ai-integration" && (
+                  <Reveal delay={0.06}>
+                    <div className="mt-6">
+                      <ArtPanel
+                        art={<BotCore />}
+                        label="Agent core"
+                        className="aspect-[16/10]"
+                      />
+                      <p className="mt-3 text-xs leading-relaxed text-faint">
+                        A governed agent layer over your CRM, inbox, calendar
+                        and knowledge base. Your team approves the moments that
+                        matter.
+                      </p>
+                    </div>
+                  </Reveal>
+                )}
               </div>
             </div>
           </div>
@@ -241,7 +288,7 @@ export default function ServicesPage() {
                     {model.description}
                   </p>
                   <p className="mt-4 text-xs leading-relaxed text-muted">
-                    <span className="font-medium text-ink">Best for — </span>
+                    <span className="font-medium text-ink">Best for: </span>
                     {model.bestFor}
                   </p>
                   <ul className="mt-5 space-y-2 border-t border-line pt-4">

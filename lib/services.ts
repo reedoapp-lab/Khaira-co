@@ -18,6 +18,7 @@ export type Service = {
   deliverables: string[];
   outcomes: string[];
   bestFor: string;
+  stack: string[];
   icon: ServiceIcon;
 };
 
@@ -29,16 +30,17 @@ export const services: Service[] = [
     shortTitle: "Lead Generation",
     kicker: "Demand generation",
     short:
-      "Identify, research and reach the right prospective customers — with a repeatable acquisition process.",
-    lead: "A strong pipeline starts with a precise definition of who you are for.",
+      "Find the right accounts, sharpen the message, and start conversations with the firms you actually want to work with.",
+    lead: "More outreach is not the answer. A precise definition of who you are for, and a repeatable route to them, is.",
     description:
-      "We define the commercial profile of the clients you want more of, then build the research, messaging and outreach process required to start relevant conversations. The result is not a list of names. It is a repeatable route to the right rooms.",
+      "We define the commercial profile of the clients you want more of, then build the research, messaging and outreach process that starts relevant conversations. That means account research in Apollo or Clay, a clear ICP, verified contact data, and sequences that sound like you. The result is not a list of names. It is a repeatable route to the right rooms.",
     deliverables: [
-      "Ideal customer profile",
-      "Target account research",
-      "Outreach messaging & sequences",
-      "Qualification criteria",
-      "Pipeline reporting",
+      "Ideal customer profile and buying triggers",
+      "Target account research in Apollo / Clay",
+      "Verified contact data and enrichment",
+      "Outreach sequences in Instantly / Lemlist",
+      "Qualification criteria and lead scoring",
+      "Pipeline reporting in HubSpot or Pipedrive",
     ],
     outcomes: [
       "A clear, shared definition of your best-fit client",
@@ -46,7 +48,15 @@ export const services: Service[] = [
       "Less time spent on poorly qualified enquiries",
     ],
     bestFor:
-      "Firms with a proven offer but an inconsistent flow of new conversations.",
+      "Firms with a proven offer and a referral habit, but no consistent route to new conversations.",
+    stack: [
+      "Apollo",
+      "Clay",
+      "LinkedIn Sales Navigator",
+      "Instantly",
+      "HubSpot",
+      "Pipedrive",
+    ],
     icon: "target",
   },
   {
@@ -56,16 +66,17 @@ export const services: Service[] = [
     shortTitle: "CRM & Automation",
     kicker: "Pipeline & follow-up",
     short:
-      "Build organised sales pipelines and automated follow-up systems that make sure no opportunity is forgotten.",
+      "A CRM that matches how you sell, with automated follow-up that keeps every opportunity moving.",
     lead: "Most lost revenue is not lost to competitors. It is lost to silence.",
     description:
-      "We design a CRM structure that reflects how your firm actually sells, then automate the repetitive parts: routing, reminders, follow-up sequences, task creation and pipeline updates. Your team gets a clear view of every opportunity and a consistent next step.",
+      "We design the CRM around how your firm actually sells, then automate the repetitive parts: routing, reminders, follow-up, task creation and pipeline updates. We work inside HubSpot, Salesforce or Pipedrive, connect Gmail or Outlook, and use n8n, Make or Zapier where a native integration does not exist. Your team gets one clear view and a consistent next step.",
     deliverables: [
-      "CRM pipeline design",
-      "Lead routing & ownership",
-      "Automated follow-up sequences",
-      "Reminders and task automation",
-      "Pipeline dashboards",
+      "CRM pipeline and stage design",
+      "Lead routing and ownership rules",
+      "Automated follow-up in HubSpot, Salesforce or Pipedrive",
+      "Gmail / Outlook and calendar sync",
+      "Slack and task reminders",
+      "Pipeline dashboards and reporting",
     ],
     outcomes: [
       "Every enquiry has an owner and a next action",
@@ -74,6 +85,16 @@ export const services: Service[] = [
     ],
     bestFor:
       "Teams managing enquiries across inboxes, spreadsheets and disconnected tools.",
+    stack: [
+      "HubSpot",
+      "Salesforce",
+      "Pipedrive",
+      "n8n",
+      "Make",
+      "Zapier",
+      "Slack",
+      "Calendly",
+    ],
     icon: "workflow",
   },
   {
@@ -83,16 +104,17 @@ export const services: Service[] = [
     shortTitle: "AI Integration",
     kicker: "Intelligent operations",
     short:
-      "Integrate AI into practical business processes to reduce repetitive work — with human oversight where it matters.",
+      "Practical AI agents that remove repetitive work, with human approval built into the workflow.",
     lead: "Useful AI removes friction. It does not add another tool to manage.",
     description:
-      "We audit how work moves through your business, identify where AI can make a genuine difference, and implement workflows that fit your existing tools. That might mean inbox triage, research assistance, document processing, meeting notes or first-draft responses. Every workflow is designed with clear approval points and an audit trail.",
+      "We audit how work moves through your business, find the places where AI can make a genuine difference, and build workflows inside the tools you already use. That can mean inbox triage, research, document processing, meeting notes or first-draft responses. We build with OpenAI, Anthropic Claude and retrieval over your own knowledge base, and we keep approval points and an audit trail in the loop.",
     deliverables: [
-      "AI opportunity audit",
-      "Workflow design & prototyping",
-      "Private AI assistants",
-      "Human-in-the-loop approvals",
-      "Team training & documentation",
+      "AI opportunity audit and workflow map",
+      "Private assistant with retrieval over your documents",
+      "OpenAI / Claude prompt and agent design",
+      "Human-in-the-loop approval steps",
+      "n8n or Make orchestration",
+      "Team training, documentation and governance",
     ],
     outcomes: [
       "Less time spent on repetitive administrative work",
@@ -101,6 +123,16 @@ export const services: Service[] = [
     ],
     bestFor:
       "Teams losing hours to admin, research, reporting or repetitive communication.",
+    stack: [
+      "OpenAI",
+      "Anthropic Claude",
+      "LangChain",
+      "n8n",
+      "Make",
+      "pgvector",
+      "Pinecone",
+      "Slack",
+    ],
     icon: "sparkles",
   },
   {
@@ -110,16 +142,17 @@ export const services: Service[] = [
     shortTitle: "Conversion Websites",
     kicker: "Digital experience",
     short:
-      "Develop modern websites and landing pages designed to turn attention into qualified enquiries.",
-    lead: "Your website should make the next conversation easier — not simply describe what you do.",
+      "A fast, clear website that turns the right attention into qualified enquiries.",
+    lead: "Your website should make the next conversation easier, not simply describe what you do.",
     description:
-      "We combine positioning, page structure, interface design and front-end development to build a site that explains your value clearly and guides the right visitor toward the right action. Built on modern foundations for speed, accessibility and search visibility.",
+      "We combine positioning, page structure, interface design and front-end development to build a site that explains your value clearly and guides the right visitor toward the right action. We build in Next.js and TypeScript, keep the site fast and accessible, and connect forms to your CRM, inbox and analytics from day one.",
     deliverables: [
-      "Messaging & page architecture",
-      "Landing page design",
-      "Next.js development",
-      "Form & CRM integration",
-      "Analytics and conversion tracking",
+      "Messaging and page architecture",
+      "Next.js / React development",
+      "Tailwind CSS design system",
+      "HubSpot or Pipedrive form integration",
+      "GA4 and conversion tracking",
+      "Core Web Vitals and accessibility pass",
     ],
     outcomes: [
       "Clearer positioning for the clients you want",
@@ -128,6 +161,15 @@ export const services: Service[] = [
     ],
     bestFor:
       "Firms whose digital presence no longer reflects the quality of their work.",
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vercel",
+      "HubSpot",
+      "GA4",
+    ],
     icon: "monitor",
   },
   {
@@ -137,16 +179,16 @@ export const services: Service[] = [
     shortTitle: "Growth Strategy",
     kicker: "Direction & priorities",
     short:
-      "Create structured acquisition and customer conversion strategies grounded in commercial reality.",
+      "A clear view of where growth is leaking, and a prioritised plan to fix the constraint that matters most.",
     lead: "Strategy is not a longer list of tactics. It is a clearer set of choices.",
     description:
-      "We review how your business acquires, qualifies and converts customers, identify the highest-impact constraints, and build a prioritised roadmap. Every recommendation is tied to a commercial outcome and a way to measure whether it worked.",
+      "We review how your business acquires, qualifies and converts customers, identify the highest-impact constraints, and build a prioritised roadmap. We use your CRM data, GA4, Search Console and sales conversations to separate evidence from opinion. Every recommendation is tied to a commercial outcome and a way to measure whether it worked.",
     deliverables: [
-      "Growth & funnel audit",
-      "Acquisition strategy",
-      "Lead conversion mapping",
-      "Measurement plan",
-      "Prioritised roadmap",
+      "Growth and funnel audit",
+      "CRM and pipeline data review",
+      "Acquisition and conversion strategy",
+      "Measurement plan in GA4 / Looker Studio",
+      "Prioritised 90-day roadmap",
     ],
     outcomes: [
       "A clear view of where opportunities are lost",
@@ -155,6 +197,14 @@ export const services: Service[] = [
     ],
     bestFor:
       "Leadership teams that need clarity before committing to a larger build.",
+    stack: [
+      "GA4",
+      "Search Console",
+      "Looker Studio",
+      "HubSpot",
+      "Metabase",
+      "SQL",
+    ],
     icon: "trending",
   },
   {
@@ -164,16 +214,17 @@ export const services: Service[] = [
     shortTitle: "Custom Applications",
     kicker: "Purpose-built tools",
     short:
-      "Develop web applications and digital tools tailored to how your business actually operates.",
+      "Focused web apps and internal tools built around the way your business actually operates.",
     lead: "Sometimes the right answer is not another subscription. It is a tool built around your process.",
     description:
-      "We design and build focused web applications: internal dashboards, client portals, calculators, proposal tools and integrations between systems that refuse to talk to each other. Each build is scoped around a specific operational problem, with a clear path to maintenance.",
+      "We design and build focused web applications: internal dashboards, client portals, calculators, proposal tools and integrations between systems that refuse to talk to each other. We use Next.js, TypeScript and Postgres, integrate with your CRM and payment tools, and scope each build around a specific operational problem.",
     deliverables: [
-      "Product scoping & UX",
-      "Web application development",
-      "Client portals & dashboards",
-      "API & tool integrations",
-      "Documentation & handover",
+      "Product scoping and UX",
+      "Next.js / TypeScript development",
+      "Postgres or Supabase data model",
+      "CRM, API and Stripe integrations",
+      "Role-based access and audit logs",
+      "Documentation and handover",
     ],
     outcomes: [
       "A tool that fits the way your team works",
@@ -182,6 +233,15 @@ export const services: Service[] = [
     ],
     bestFor:
       "Businesses whose core process is constrained by generic software.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Postgres",
+      "Supabase",
+      "Prisma",
+      "Stripe",
+      "REST / GraphQL",
+    ],
     icon: "blocks",
   },
 ];

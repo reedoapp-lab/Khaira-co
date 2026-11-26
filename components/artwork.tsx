@@ -2,10 +2,10 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { systemStages } from "@/lib/solutions";
 
-/* ————————————————————————————————————————————————
+/* ------------------------------------------------
    Deterministic helpers so artwork renders identically
    on the server and the client (no hydration drift).
-———————————————————————————————————————————————— */
+------------------------------------------------ */
 
 function rand(seed: number) {
   const value = Math.sin(seed * 127.1 + 311.7) * 43758.5453;
@@ -114,10 +114,10 @@ const constellationEdges: Array<[number, number]> = [
   [0, 2],
 ];
 
-/* ————————————————————————————————————————————————
-   Nebula backdrop — used behind the homepage hero,
+/* ------------------------------------------------
+   Nebula backdrop - used behind the homepage hero,
    every page hero and the closing CTA.
-———————————————————————————————————————————————— */
+------------------------------------------------ */
 
 export function NebulaBackdrop({
   variant = "dark",
@@ -377,9 +377,9 @@ export function NebulaBackdrop({
   );
 }
 
-/* ————————————————————————————————————————————————
-   Orbital halo — decorative ring system for page heroes
-———————————————————————————————————————————————— */
+/* ------------------------------------------------
+   Orbital halo - decorative ring system for page heroes
+------------------------------------------------ */
 
 export function OrbitHalo({ className }: { className?: string }) {
   return (
@@ -449,9 +449,9 @@ export function OrbitHalo({ className }: { className?: string }) {
   );
 }
 
-/* ————————————————————————————————————————————————
-   Orbit diagram — the Enquiry-to-Meeting system
-———————————————————————————————————————————————— */
+/* ------------------------------------------------
+   Orbit diagram - the Enquiry-to-Meeting system
+------------------------------------------------ */
 
 export function OrbitDiagram({
   className,
@@ -608,9 +608,9 @@ export function OrbitDiagram({
   );
 }
 
-/* ————————————————————————————————————————————————
-   Signal field — abstract growth / data artwork
-———————————————————————————————————————————————— */
+/* ------------------------------------------------
+   Signal field - abstract growth / data artwork
+------------------------------------------------ */
 
 export function SignalField({ className }: { className?: string }) {
   return (
@@ -748,9 +748,9 @@ export function SignalField({ className }: { className?: string }) {
   );
 }
 
-/* ————————————————————————————————————————————————
-   Constellation map — connected systems artwork
-———————————————————————————————————————————————— */
+/* ------------------------------------------------
+   Constellation map - connected systems artwork
+------------------------------------------------ */
 
 export function ConstellationMap({ className }: { className?: string }) {
   return (
@@ -852,9 +852,9 @@ export function ConstellationMap({ className }: { className?: string }) {
   );
 }
 
-/* ————————————————————————————————————————————————
+/* ------------------------------------------------
    Framed artwork panel
-———————————————————————————————————————————————— */
+------------------------------------------------ */
 
 export function ArtPanel({
   art,

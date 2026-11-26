@@ -114,7 +114,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
     }
     if (form.challenge.trim().length < 20) {
       next.challenge =
-        "Please give us a little more detail — at least a sentence.";
+        "Please give us a little more detail, at least a sentence.";
     }
     if (!form.consent) {
       next.consent = "Please confirm you agree to be contacted.";
@@ -536,7 +536,7 @@ export function ContactForm({ defaultService }: ContactFormProps) {
             strokeWidth={1.6}
           />
           Fields marked * are required. We use your details only to respond to
-          this enquiry — no mailing list.
+          this enquiry. No mailing list.
         </p>
       </div>
 

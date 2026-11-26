@@ -1,19 +1,16 @@
 export const site = {
   name: "Khaira.co",
   shortName: "Khaira",
-  tagline: "B2B growth & intelligent automation",
+  tagline: "The growth system for consulting firms",
   description:
-    "Khaira.co helps consulting firms and professional service businesses capture more enquiries, automate follow-up and build smarter systems for sustainable growth.",
-  url: "https://khaira-co.eu",
+    "Khaira.co builds the growth system for consulting firms: AI-assisted enquiry capture, CRM automation, follow-up and booking. Turn more interest into booked meetings.",
+  url: "https://khairaco.space",
   positioning:
-    "We build systems that turn business opportunities into measurable growth.",
+    "We build the growth system that turns interest into booked meetings.",
   location: "United Kingdom & Europe",
-  // PLACEHOLDER — confirm these details with the client before launch.
   contact: {
-    email: "hello@khaira-co.eu",
-    emailVerified: false,
-    linkedin: "https://www.linkedin.com/company/khaira-co",
-    linkedinVerified: false,
+    email: "grow@khairaco.space",
+    infoEmail: "info@khairaco.space",
   },
   nav: [
     { label: "Home", href: "/" },

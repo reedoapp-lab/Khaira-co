@@ -13,7 +13,7 @@ const metrics = [
   { label: "New enquiries", value: "48", change: "+12%" },
   { label: "Qualified", value: "21", change: "+8%" },
   { label: "Meetings", value: "9", change: "+3" },
-  { label: "Avg. response", value: "2m", change: "−38%" },
+  { label: "Avg. response", value: "2m", change: "-38%" },
 ];
 
 const bars = [34, 48, 42, 62, 54, 72, 66, 88, 76, 94, 82, 100];
@@ -300,7 +300,7 @@ export function HeroDashboard() {
       </div>
 
       <p className="mt-3 text-center text-[10px] leading-relaxed text-faint">
-        Illustrative product demonstration. Demo data — not live client
+        Illustrative product demonstration. Demo data, not live client
         results.
       </p>
     </div>

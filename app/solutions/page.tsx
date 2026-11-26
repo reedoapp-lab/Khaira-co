@@ -20,9 +20,18 @@ import {
 import { SolutionIcon, StageIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Solutions — The Enquiry-to-Meeting System",
+  title: "Solutions | The Enquiry-to-Meeting System for Consulting Firms",
   description:
-    "Explore Khaira.co's connected growth solutions: the Enquiry-to-Meeting System, lead generation engine, CRM and follow-up automation, and practical AI operations.",
+    "Explore Khaira.co's connected growth solutions: the Enquiry-to-Meeting System, lead generation engine, CRM and follow-up automation, and practical AI operations. Built on HubSpot, Pipedrive, n8n and OpenAI.",
+  keywords: [
+    "enquiry to meeting system",
+    "lead generation engine for consulting firms",
+    "CRM follow-up automation",
+    "AI operations layer",
+    "HubSpot and Pipedrive automation",
+    "n8n lead routing",
+    "consulting firm growth system",
+  ],
   alternates: { canonical: "/solutions" },
 };
 
@@ -37,7 +46,7 @@ export default function SolutionsPage() {
             <span className="text-brand">missed opportunities.</span>
           </>
         }
-        description="We design the flow between your website, CRM, inbox and calendar — so every enquiry has a clear next step."
+        description="We design the flow between your website, CRM, inbox and calendar, so every enquiry has a clear owner and a clear next step. No black boxes. No manual handoffs."
         actions={
           <>
             <CtaLink href="/contact" size="lg">
@@ -66,7 +75,7 @@ export default function SolutionsPage() {
             <p className="max-w-sm text-sm leading-relaxed text-muted">
               Each solution can stand alone, but they are designed to connect.
               The goal is one visible journey from first enquiry to booked
-              conversation.
+              conversation, built on the tools your team already uses.
             </p>
           </div>
 
@@ -203,8 +212,8 @@ export default function SolutionsPage() {
             <div className="lg:col-span-5">
               <p className="text-sm leading-relaxed text-muted md:text-base">
                 A connected workflow that captures, organises and follows up
-                with every lead — then shows you what happened. Built on the
-                tools you already use.
+                with every lead, then shows you what happened. Built on HubSpot
+                or Pipedrive, n8n or Make, Gmail or Outlook, Calendly and Slack.
               </p>
               <div className="mt-5 flex flex-wrap gap-3">
                 <CtaLink
@@ -292,7 +301,7 @@ export default function SolutionsPage() {
                   heroics.
                 </p>
                 <p className="mt-3 text-xs leading-relaxed text-muted">
-                  Best fit: 2–50 people, an established offer, and a desire to
+                  Best fit: 2 to 50 people, an established offer, and a desire to
                   improve conversion before increasing acquisition spend.
                 </p>
               </div>
@@ -343,7 +352,7 @@ export default function SolutionsPage() {
             </h2>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted">
               The system is designed around the way a real opportunity moves
-              through your business — not around a software vendor&apos;s
+              through your business, not around a software vendor&apos;s
               template.
             </p>
             <div className="mt-6">
@@ -399,7 +408,7 @@ export default function SolutionsPage() {
       <CtaSection
         eyebrow="Next step"
         title="See where your enquiry journey breaks."
-        description="Book a free consultation and we will map the current flow from first enquiry to booked meeting — and identify the most useful place to start."
+        description="Book a free consultation and we will map the current flow from first enquiry to booked meeting, then identify the most useful place to start."
         primaryLabel="Book Your Free Consultation"
         primaryHref="/contact"
         secondaryLabel="Explore our services"
